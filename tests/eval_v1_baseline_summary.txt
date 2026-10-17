@@ -1,0 +1,28 @@
+============================================================
+CORES-AI TR v1 BASELINE DEĞERLENDİRME ÖZETİ
+============================================================
+
+Checkpoint   : out-cores-85m-test/ckpt.pt
+iter_num     : 5000
+best_val_loss: 2.8424
+
+Toplam soru  : 150
+EOS vurma    : 85/150 (56.7%)
+Süre         : 1127.8s
+
+PUANLAMA ŞABLONU (manuel doldurun):
+----------------------------------------
+Kategori | Puan Ortalaması | Notlar
+  A - Selaşma ve Rol Tanıma              : 25 soru → [ ]
+  B - Türkçe Cümle Tamamlama             : 30 soru → [ ]
+  C - Basit Soru-Cevap (Faktüel)         : 25 soru → [ ]
+  D - Talimat Takibi                     : 25 soru → [ ]
+  E - Kısa Özetleme                      : 25 soru → [ ]
+  F - Tekrar ve Tutarlılık               : 20 soru → [ ]
+
+PUANLAMA REHBERI:
+  5: Doğrudan ve doğru yanıt, akıcı Türkçe, konuya sadık.
+  4: Büyük ölçüde doğru, küçük kayma veya fazladan metin var.
+  3: Kısmen ilgili, konuyu yavaş yavaş kaybediyor.
+  2: Konu dışı ama Türkçe akıcılığı korunuyor.
+  1: Anlamsız, tekrar döngüsü veya dil bozuklukları var.

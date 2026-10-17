@@ -1,0 +1,26 @@
+======================================================================
+CORES-AI TR v2 SFT DEGERLENDIRME OZET RAPORU
+======================================================================
+
+Checkpoint           : TESTLER/temp_sft_pilot/ckpt_best.pt
+Iterasyon            : 250
+Val Loss             : 4.084935474395752
+Baseline Checkpoint  : out-cores-85m-test/ckpt.pt
+Baseline SHA-256     : e88f284fdfb9ddc48075a97e47f509859319590df312a4226d9b355c63347e51 (GÜVENLİ/DEĞİŞMEDİ)
+Toplam Soru          : 150
+Hata Sayisi          : 0
+EOS Vurma Orani      : 142/150 (94.7%)
+Ort. Uretilen Token  : 25.9
+Toplam Sure          : 1116.9s (18.6 dakika)
+
+KATEGORI BAZLI DAGILIM:
+----------------------------------------------------------------------
+Kat  | Kategori Adi                     | Soru  | EOS %    | Ort. Tok
+----------------------------------------------------------------------
+A    | Selaşma ve Rol Tanıma            | 25    | %100.0   | 13.0    
+B    | Türkçe Cümle Tamamlama           | 30    | %100.0   | 33.0    
+C    | Basit Soru-Cevap (Faktüel)       | 25    | %96.0    | 21.8    
+D    | Talimat Takibi                   | 25    | %84.0    | 32.4    
+E    | Kısa Özetleme                    | 25    | %96.0    | 26.6    
+F    | Tekrar ve Tutarlılık             | 20    | %90.0    | 27.6    
+----------------------------------------------------------------------

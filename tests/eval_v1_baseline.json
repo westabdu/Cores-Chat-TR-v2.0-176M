@@ -1,0 +1,1538 @@
+{
+  "meta": {
+    "model_checkpoint": "out-cores-85m-test\\ckpt.pt",
+    "iter_num": 5000,
+    "best_val_loss": 2.842421054840088,
+    "model_args": {
+      "n_layer": 10,
+      "n_head": 10,
+      "n_embd": 640,
+      "block_size": 512,
+      "bias": false,
+      "vocab_size": 50000,
+      "dropout": 0.0,
+      "use_gradient_checkpointing": false
+    },
+    "tokenizer": "tokenizer_tr_v2.json",
+    "eval_params": {
+      "temperature": 0.7,
+      "top_k": 50,
+      "max_new_tokens": 128,
+      "seed": 42,
+      "device": "cpu"
+    },
+    "total_questions": 150,
+    "eos_hit_count": 85,
+    "eos_hit_rate": "56.7%",
+    "elapsed_seconds": 1127.8,
+    "scoring_guide": {
+      "5": "Doğrudan ve doğru yanıt, akıcı Türkçe, konuya sadık.",
+      "4": "Büyük ölçüde doğru, küçük kayma veya fazladan metin var.",
+      "3": "Kısmen ilgili, konuyu yavaş yavaş kaybediyor.",
+      "2": "Konu dışı ama Türkçe akıcılığı korunuyor.",
+      "1": "Anlamsız, tekrar döngüsü veya dil bozuklukları var."
+    }
+  },
+  "results": [
+    {
+      "id": "A01",
+      "category": "A",
+      "prompt": "Merhaba!",
+      "expected_behavior": "Selamlama karşılığı verilmeli. Konuya ilgisiz metin üretilmemeli.",
+      "output": "Merhaba! (The Old Men) (Türkçe: Merhaba)\n\nTürkçe: Sensizler (The Old Men)\n\nTürkçe: \"Ekin\" (The Old Men)\n\nTürkçe: \"Merhaba\" (F.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S.S",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A02",
+      "category": "A",
+      "prompt": "Sen kimsin?",
+      "expected_behavior": "Model kendini tanıtmalı ya da makul bir yanıt vermeli.",
+      "output": "Sen kimsin? (ya da kimsin), diğer adıyla Melis, Sezen Aksu'nun, (d. 1 Ocak 1957, İstanbul), Türk tiyatro, sinema ve dizi oyuncusu.\n\nHayatı \nSen kimsin?'in ilk çocuğu, bir anne ve bir annenin çocuğu olarak babası tarafından dünyaya geldi. Annesi, annesi, annesi ise babası ise bir erkek kardeşi vardı.\n\nÇocukluğu \nSen kimsin?'in ilk çocuğu, babası ise bir çocuktur. Babası bir anne ve bir kız çocuğu idi. Babası; annesi ise bir erkek kardeşi vardır. Babası, annesi ise bir kız kardeşi, annesi ise bir kız kardeşi vardır.\n\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A03",
+      "category": "A",
+      "prompt": "Nasılsın?",
+      "expected_behavior": "Hal-hatır sorusuna kısa ve uygun yanıt.",
+      "output": "Nasılsın?\n\nAyrıca bakınız \n Aşk (film)\n\nDış bağlantılar \n Türk Sineması internet sitesi\n\nTürk film tiyatro oyunları\nTürkçe televizyon programları\nTürkçe televizyon programları",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A04",
+      "category": "A",
+      "prompt": "İyi günler!",
+      "expected_behavior": "Selamlama karşılığı veya konuşmaya devam teklifi.",
+      "output": "İyi günler! style=\"background:#F1F1F1\" |\n|\n| style=\"background:#F1F1F1\" |\n| style=\"background:#F1F1F1\" |\n| style=\"background:#F1F1F1\" |\n| style=\"background:#F1F1F1\" |\n| style=\"background:#F1F1F1\" |\n| style=\"background:#F1F1F1\" |\n| style=\"background:#F1F1F1\" |\n| style=\"background:#F1F1F1\" |\n|",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A05",
+      "category": "A",
+      "prompt": "Sana bir şey sormak istiyorum.",
+      "expected_behavior": "Soruyu bekler tarzda yanıt vermeli.",
+      "output": "Sana bir şey sormak istiyorum.\n\n1. Sahne\n\n2. Sahne\n\n3. Sahne\n\n4. Sahne\n\n4. Sahne\n\n5. Sahne\n\n6. Sahne\n\n6. Sahne\n\n7. Sahne\n\n7. Sahne\n\n8. Sahne\n\n8. Sahne\n\n8. Sahne\n\n11. Sahne\n\n11. Sahne\n\n13. Sahne\n\n13. Sahne\n\n13. Sahne\n\n13. Sahne\n\n15. Sahne\n\n15. Sahne\n\n16. Sahne\n\n17. Sahne\n\n17. Sahne\n\n20. Sahne\n\n21",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A06",
+      "category": "A",
+      "prompt": "Bana yardım edebilir misin?",
+      "expected_behavior": "Evet ya da nasıl yardım edebileceğini sormalı.",
+      "output": "Bana yardım edebilir misin?\n\nOyuncu kadrosu\n\nGenel bakış\n\nBölümler\n\n1. sezon (2022)\n\nKaynakça\n\nDış bağlantılar\n\n2023'te başlayan Türk televizyon dizileri\nTürk dramatik televizyon dizileri\nTürk dramatik televizyon dizileri\nFox dizileri\nİstanbul'da çekilmiş televizyon dizileri\nTürk dramatik televizyon dizileri\nYayına kaldırılan Türk televizyon dizileri\n2023'te sona eren Türk televizyon dizileri\nTürk dramatik televizyon dizileri\nİstanbul'da çekilmiş televizyon dizileri\n2022'de sona eren Türk televizyon dizileri\nFuat Siber'in senaryosunu yazdığı televizyon dizileri\nİstanbul'da çekilmiş televizyon dizileri\nİstanbul'da çekilmiş televizyon dizileri\nİstanbul'da çekilmiş televizyon",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A07",
+      "category": "A",
+      "prompt": "Günaydın!",
+      "expected_behavior": "Selamlama karşılığı.",
+      "output": "Günaydın! (her zaman diye an), Orhan Kemal'in bir arkadaşı tarafından yazılmış olan kitabıdır.\n\nAyrıca bakınız \n Yaşar Kemal'in romanı\n\nKaynakça\n\nGenel\n\nKitap\nTürkçe kitaplar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A08",
+      "category": "A",
+      "prompt": "İyi geceler.",
+      "expected_behavior": "Selamlama karşılığı.",
+      "output": "İyi geceler.\n\nKaynakça \n\nSözler\nSözler\nSözler",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A09",
+      "category": "A",
+      "prompt": "Türkçe konuşabiliyor musun?",
+      "expected_behavior": "Evet, Türkçe konuşabilir şeklinde yanıt vermeli.",
+      "output": "Türkçe konuşabiliyor musun?\n\nBöyle bir şey anlamıyorsun?\n\nBöyle bir şey anlamıyorsun?\n\nYıkıcıya sahip olmak\n\nKaynakça\n\nAyrıca bakınız \n\nBöyle bir şey anlamıyorsun?\n\nDış bağlantılar\nSöyleşimi yoksun?\n\nBöyle bir şey anlamıyorsun?\n\nBöyle bir şey anlamıyorsun?\n\nBöyle bir şey anlamıyorsun?\n\nBöyle bir şey anlamıyorsun?\n\nBöyle bir şey anlamıyorsun?\n\nBöyle bir şey anlamıyorsun?\n\nBöyle bir şey anlamıyorsun?\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A10",
+      "category": "A",
+      "prompt": "Yapay zeka mısın?",
+      "expected_behavior": "Makul bir yanıt; belirsiz ya da konu dışına çıkmamalı.",
+      "output": "Yapay zeka mısın? (İngilizce: Constitution with the Disease), bir bilgisayar bilgisayarında kullanılan bir sosyal bilgisayardır.\n\nCanlı zeka mısın? \nYapay zeka mısın? , bir nesnenin fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak psikolojik olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak biyolojik olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel olarak fiziksel",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A11",
+      "category": "A",
+      "prompt": "Ne yapabilirsin?",
+      "expected_behavior": "Yetkinliklerini açıklamalı ya da örnek vermeli.",
+      "output": "Ne yapabilirsin?\n\nMayınlama\n\nMayınlama (site)\n\nKaynakça \n\nVideo paylaşım siteleri\nVideo paylaşım siteleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A12",
+      "category": "A",
+      "prompt": "Konuşmaya başlayalım.",
+      "expected_behavior": "Devam etmeye hazır olduğunu belirtmeli.",
+      "output": "Konuşmaya başlayalım.\n\nYanide bulunan bir müzik videosu, müzik videosu ve daha sonra bu şarkı için çok özel bir müzik videosu ile birlikte canlı performans sergilemeye başladı. En çok satan şarkılar arasında, albüm satışları, reklamlar ve stüdyo kayıtlarının yanı sıra daha geniş bir hit oldu.\n\nŞarkı listesi\n\nKaynakça \n\n2015 şarkıları\nDMC şarkıları\nDMC şarkıları\nDMC şarkıları\nA.E. Entertainment şarkıları",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A13",
+      "category": "A",
+      "prompt": "Seni kim yaptı?",
+      "expected_behavior": "Makul bir yanıt; konuya ilgisiz metin üretmemeli.",
+      "output": "Seni kim yaptı? (Özgün adı: The Man with the Year)\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\nThe Man Who\n\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A14",
+      "category": "A",
+      "prompt": "Nereye bağlısın?",
+      "expected_behavior": "Belirsiz ya da kısa bir yanıt kabul edilebilir; konu dışına çıkmamalı.",
+      "output": "Nereye bağlısın?\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam\n\nTürkçe kelime ve anlam",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A15",
+      "category": "A",
+      "prompt": "Bugün hava nasıl?",
+      "expected_behavior": "Bilmediğini söylemeli ya da makul bir yanıt vermeli.",
+      "output": "Bugün hava nasıl?\n\nKaynakça \n\nÜlkelerine göre ulaşım\nTürkiye'deki hidroelektrik santralleri\nTürkiye'deki hidroelektrik santralleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A16",
+      "category": "A",
+      "prompt": "Sohbet edelim.",
+      "expected_behavior": "Olumlu yanıt, konuşmayı sürdürecek bir yanıt.",
+      "output": "Sohbet edelim.\n\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nSohbet alalım\nS",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A17",
+      "category": "A",
+      "prompt": "Merhaba, adın ne?",
+      "expected_behavior": "Kendini tanıtmalı.",
+      "output": "Merhaba, adın ne?\n\nAyrıca bakınız\nMerhaba\n\nKaynakça\n\nDış bağlantılar \n Merhaba\n Merhaba Türkçe Fotoğrafları\n Merhaba Türkçe Fotoğrafları\n\nMerhaba",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A18",
+      "category": "A",
+      "prompt": "Teşekkür ederim.",
+      "expected_behavior": "Rica ederim ya da benzer nazik yanıt.",
+      "output": "Teşekkür ederim.\n\nKaynakça \n\nDerginin\nDerginin tarihi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A19",
+      "category": "A",
+      "prompt": "Anlıyorum, devam et.",
+      "expected_behavior": "Konuya devam etmeli ya da devam etmek için ne konuşulduğunu sormalı.",
+      "output": "Anlıyorum, devam et.\n\nKaynakça \n\nAnladım",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A20",
+      "category": "A",
+      "prompt": "Hoş geldin!",
+      "expected_behavior": "Hoş bulduk ya da benzer selamlama.",
+      "output": "Hoş geldin! (şarkı)\n\nŞarkı listesi \n \"Hoş geldin!\" (söz-müzik: Sinan)\n \"Seviyorum\" (söz-müzik: Sinan)\n \"Sevince\" (söz-müzik: Sinan)\n \"Hoş geldin! (söz-müzik: Sinan)\n \"Seviyorum\" (söz-müzik: Sinan)\n \"Seviyorum\" (söz-müzik: Sinan)\n \"Hoş geldin! (söz-müzik: Sinan)\n \"Hoş geldin! (söz-müzik: Sinan)\n \"Seviyorum\" (söz-müzik: Sinan)\n \"Seviyorum",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A21",
+      "category": "A",
+      "prompt": "Seninle çalışmak güzel.",
+      "expected_behavior": "Nazik ve kısa yanıt.",
+      "output": "Seninle çalışmak güzel.\n\nDış bağlantılar \n Seninle yapmak güzel.\n\n20. yüzyıl Türk matematikçileri\n21. yüzyılda Türk kadınlar\n1927 doğumlular",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A22",
+      "category": "A",
+      "prompt": "Konuyu değiştirelim.",
+      "expected_behavior": "Tamam ya da yeni konu önerisi.",
+      "output": "Konuyu değiştirelim.\n\nKonuyu değiştirelim.\n\nKonuyu değiştirelim.\n\nDış bağlantılar \n\nKonuyu değiştirelim.\n\nKaynakça \n\nKonuyu değiştirelim.\n\nKonuyu değiştirelim.\n\nKonuyu değiştirelim.\n\nKonuyu değiştirelim.\n\nAyrıca bakınız \n Kalıplama\n\nKaynakça\n\nDış bağlantılar \n\nKonuyu değiştirelim.\nKonuyu değiştirelim.\n\nKonuyu değiştirelim.\nBu madde ile ilgili bilgiler:\n\nKaynakça\n\nDış bağlantılar \n Konuyu değiştirelim.\n Konuyu değiştirelim.\n\nKonuyu değiştirelim.\nKonuyu değiştir",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A23",
+      "category": "A",
+      "prompt": "Bir şey sormama gerek var.",
+      "expected_behavior": "Soruya hazır olduğunu belirtmeli.",
+      "output": "Bir şey sormama gerek var.\n\nÖrneğin, bir insanın bu davranışının, ne gibi bir yerde ne kadar hızlı hareket ettiği ve her şeyin ne kadar hızlı hareket edeceği bir şey olduğunu bilmezler. Bu tür bir kişinin aynı zamanda bir kişinin kendi kendini yarattığını fark etmeleri için gerekli olduğunu, bu nedenle kendi kendini tekrar yaratacağını ve bu yüzden de bir şeyi unuttuğunu ve ne kadar hızlı hareket ettiğini unuttuğunu açıklar.\n\nSonuç \nBir şeyin bir şey var.\n\nBazı insanlar eğer bir insan için bir şey, hiçbir şey yoktur. Bu yüzden bunu bilmez.\n\nSonuç \nBir kişinin bir kişinin, bir insanın onu, bir insanın, yani bir insanın",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A24",
+      "category": "A",
+      "prompt": "Bu konuda bilgin var mı?",
+      "expected_behavior": "Hangi konuda olduğunu sormalı ya da genel yanıt vermeli.",
+      "output": "Bu konuda bilgin var mı?\n\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\nSözü\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "A25",
+      "category": "A",
+      "prompt": "Görüşürüz!",
+      "expected_behavior": "Vedalaşma yanıtı.",
+      "output": "Görüşürüz! (Pablo 2) – 5:00\nCizden ve ölüm! (Pablo 3) – 6:00\n\nKaynakça\n\nDış bağlantılar\n\n2012'de başlayan televizyon dizileri\n2012'de sona eren televizyon dizileri\n2010'larda Türkçe televizyon dizileri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B01",
+      "category": "B",
+      "prompt": "Bugün hava çok güzel,",
+      "expected_behavior": "Cümleyi dilbilgisi açısından doğru tamamlamalı.",
+      "output": "Bugün hava çok güzel, uzun ve ince kumsal bir ağaçtır.\n\nAyrıca bakınız \n Türkiye'deki dağlar listesi\n\nKaynakça\n\nDış bağlantılar \n \n\nTürkiye'deki dağlar\nTürkiye'deki dağlar\nBüyükdere",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B02",
+      "category": "B",
+      "prompt": "Türkiye'nin en büyük şehri",
+      "expected_behavior": "İstanbul ifadesiyle devam etmeli ya da ilgili metin.",
+      "output": "Türkiye'nin en büyük şehri olan Edirne'de bulunan bir kent.\n\nŞehir, Çanakkale Savaşı'nın ardından 1878 yılında kurulmuştur.\n\nŞehirde çok sayıda yerleşim yeri vardır. Ayrıca, bu şehrin ilk belediye başkanı, kent sınırları içinde yer alan ilk şehir olma özelliğini taşımaktadır.\n\nKaynakça \n\nÇanakkale tarihi\nÇanakkale merkez\nTürkiye'nin belediyeleri\nTürkiye'deki şehir ve kasabalar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B03",
+      "category": "B",
+      "prompt": "Bilim insanları yıllarca araştırdı ve sonunda",
+      "expected_behavior": "Mantıklı bir cümle tamamlaması.",
+      "output": "Bilim insanları yıllarca araştırdı ve sonunda, tıp laboratuvarının ilk başkanı olan William A. R. C. Johnson (evlilik öncesi soyadı: William B. B. Johnson, \"Bkz. \"John B. Johnson\"\n\nPopüler kültürde \nBilim insanları, özellikle de, bilim adamları ve bilim adamları, hem bilim adamları hem de bilim adamları tarafından pek çok bilim adamlarının ve bilim adamları tarafından incelendi. Bu bilim adamları, bilim adamları tarafından bilim insanları için önemli bir rol oynadı. Bu bilim adamları bilim adamları, bilim adamları, bilim adamları ve bilim adamları ve bilim adamları, bilim adamları ve bilim adamları gibi bilim adamları çok sayıda bilim adamı tarafından yetiştirildi.\n\nBilim adamları,",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B04",
+      "category": "B",
+      "prompt": "Kitap okumak insana",
+      "expected_behavior": "Olumlu bir ifade ile devam etmeli.",
+      "output": "Kitap okumak insana, başka bir şekilde kendi nasıl bir şeyi düşünmelerini öğretiyor.\n\nYazarın öğretilmesine yönelik bir çalışma, felsefe ve felsefe gibi diğer birçok farklı yaklaşımları daha da genişletiyor.\n\nKaynakça\n\nDış bağlantılar \n\nKitap okumak\nYazarlık",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B05",
+      "category": "B",
+      "prompt": "Sağlıklı yaşam için düzenli egzersiz",
+      "expected_behavior": "Egzersizin faydaları ya da önemi hakkında devam.",
+      "output": "Sağlıklı yaşam için düzenli egzersizler veya ayakkabılar, bir kişinin kişisel veya profesyonel veya genel bir şekilde gerçekleştirilebileceğini gösteren, bir kişinin veya bir kişiyi bir şekilde iyileştireceğini veya gerçekleştirdiğini gösteren bir çeşit tekniktir. Bu teknik, bir kişinin veya bir kişinin veya bir kişinin kendi başına veya bir kişinin kendi başına veya bir kişinin ve bir kişinin kendi başına veya bir kişinin kendi başına veya bir kişinin kendi başına veya bir kişinin kendi başına veya bir kişinin kendi başına veya bir kişinin kendi başına veya bir kişinin kendi başına veya kendi başına veya bir kişinin veya kendi başına bir kişinin kendi başına veya bir kişinin kendi başına veya bir kişinin kendi başına veya kendi başına veya bir kişinin kendi başına veya bir kişinin kendi başına",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B06",
+      "category": "B",
+      "prompt": "Teknoloji her geçen gün",
+      "expected_behavior": "Teknoloji gelişimi hakkında makul devam.",
+      "output": "Teknoloji her geçen günlerin ve onların bilgisayardan gelen veri ve donanımdan gelen veri toplama, bilgisayardan gelen veri toplama, bilgisayardan gelen veri toplama gibi konularda bilgi toplama ve veri toplama, veri toplama ve veri toplama gibi bazı sonuçları içermektedir.\n\nTarihçe \nBir bilgisayardaki veri toplama ve veri toplama, veri toplama ve veri toplama sistemi gibi bazı sonuçları içermektedir. Bu durum, veri toplama ve veri toplama gibi birçok problemden kaynaklanan bir sorunu göstermektedir.\n\nProgramlama\n\nUygulama \nProje amacı, veri toplama ve veri toplama gibi temel konuları içeren tüm veri toplama ve veri toplama işlemleri arasında bir bağlantı yoktur.\n\nAyrıca bakınız \nVeri toplama\n\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B07",
+      "category": "B",
+      "prompt": "Çocuklar oyun oynarken",
+      "expected_behavior": "Çocukların oyun oynama durumuna ilişkin devam.",
+      "output": "Çocuklar oyun oynarken, oyun, oyun, oyun ya da oyun oynamak gibi birçok farklı oyun oynarken, oyun oynamakta ve oyun oynamak gibi amaçlar için kullanılan oyun türüdür. Oyuncu, oyun oynayan ve oyun oynamak için bir oyun oynamak için bir oyun oynamak ve oyun oynamak için bir oyun oynamak için bir oyun oynamak için oyun oynamak için bir oyun oynamak için bir oyun oynamak.\n\nOyunun konusu oyunun bir parçası olarak oynanması, oyuncuların oyunun hem oyun hem de oyun oynamak için oyun oynamak için oyun oynamak için bir oyun oynamak için oyun oynamak için bir oyun oynamak. Oyun, oyun oynamak için oyun oynamak için oyun oynamak için bir oyun oynamak ve oyun oynamak için oyun oynamak için bir oyun oynamak",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B08",
+      "category": "B",
+      "prompt": "Dil öğrenmek zaman alır çünkü",
+      "expected_behavior": "Dil öğrenme süreci hakkında makul gerekçe.",
+      "output": "Dil öğrenmek zaman alır çünkü dilin, dil için geçerli olan dil yapmak, dil için geçerli olan dil için geçerli olan dil ya da dil yazma için geçerli olan dil.\n\nDil ve Tarihçesi \nDil öğrenmek zaman, dil ile ilgili kelimeleri öğrenerek bu dil için kullanılabilir.\n\nDil dil ve Tarihçesi \n\nDil, dil ve Tarihçesi, dil, tarih, tarih, coğrafya, dil, edebiyat, felsefe, edebiyat, dil, devlet, tarih, dil, dil, dil, dil, felsefe, edebiyat, dil, dil ve kültür.\n\nDil ve Tarihçesi \nDil dil ile ilgili diller, dil, dil, edebiyat, dil,",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B09",
+      "category": "B",
+      "prompt": "Annem her sabah kahve içer ve",
+      "expected_behavior": "Kısa, günlük yaşam içerikli devam.",
+      "output": "Annem her sabah kahve içer ve yemek yemesi ile yapılan yemektir.\n\nEt \nAnnem her akşam içmeye başlar.\n\nKaynakça \n\nMeye",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B10",
+      "category": "B",
+      "prompt": "Ormanlarda pek çok farklı hayvan",
+      "expected_behavior": "Hayvanlar ya da doğa hakkında devam.",
+      "output": "Ormanlarda pek çok farklı hayvandan yapılmış, birçok kuş türü de barındıran, en çok bilinen ve en çok bilinen tür olduğunu gösteren ağaçlardır. Çok sayıda kuş türü de kuş türü de vardır.\n\nDış bağlantılar \n\nHayvanlar\nTürkiye'deki kuşlar\nTürkiye'deki kuşlar\nCarl Linnaeus tarafından adlandırılmış taksonlar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B11",
+      "category": "B",
+      "prompt": "İyi bir lider olmak için",
+      "expected_behavior": "Liderlik özellikleri hakkında devam.",
+      "output": "İyi bir lider olmak için, bir kişinin bir kişinin bir kişiyi veya bir kişiye karşı bir suçluluk olduğunu veya olumsuz davranacağını belirleyebiliriz.\n\nKaynakça \n\nPsikolojik korku",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B12",
+      "category": "B",
+      "prompt": "Mutlu bir hayat sürmek için en önemli şey",
+      "expected_behavior": "Mutlulukla ilgili anlamlı bir tamamlama.",
+      "output": "Mutlu bir hayat sürmek için en önemli şey budur. En yaygın olarak \"Mutlu\" anlamına gelen bir terim, \"Mutlu\" anlamına gelen ve \"Mutlu\" anlamına gelen \"Mutlu\" kelimesinden türetilmiştir. Bunlar arasında  \"Mutlu\", \"Mutlu\" veya \"Mutlu\" kelimesinden gelir.\n\nMutlu, \"Mutlu\" veya \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\" veya \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\", \"Mutlu\",",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B13",
+      "category": "B",
+      "prompt": "Yıldızlar geceleri",
+      "expected_behavior": "Astronomi veya gökyüzü ile ilgili devam.",
+      "output": "Yıldızlar geceleri, genellikle yaşlı, genç ve yaşlı bir erkek çocuktur.\n\nYıldızlar geceleri, yavruları ve çocukları ile birlikte yaşar.\n\nDış bağlantılar\n\nKaynakça \n\nYıldızlar geceleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B14",
+      "category": "B",
+      "prompt": "Tarih boyunca insanlar",
+      "expected_behavior": "İnsanlık tarihi ile ilgili genel devam.",
+      "output": "Tarih boyunca insanlar, insanlar, insanlar, insanlar, insanlar, insanlar, insanlar, insanların, insanlar, insanlar ve insanlar gibi birçok hayvandan uzak duruyorlardı.\n\nTarih öncesi zamanlarda insanlar, insanların ve insanların, insanlar tarafından yönetilen, insanların ve insanların yaşadığı bir grup olan, insan ve insanlar tarafından yönetilen, insanlar tarafından yapılan bir genetik materyalin, insanları ve bunların her ikisi de genetik materyalinin, insan ve hayvanların varlığını gösteren bir genetik materyalin, insan ile yaşayan insan-insanları arasındaki etkileşimi ve yaşamlarının bir sonucu olarak meydana gelen bir genetik materyalin olduğunu tahmin ediyor.\n\nTarih öncesi zamanlara ait bir dizi tür, yaşamla ilgili bir dizi tür",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B15",
+      "category": "B",
+      "prompt": "Bir öğrenci her gün düzenli çalışırsa",
+      "expected_behavior": "Başarı ya da düzenli çalışmanın sonucu ile ilgili devam.",
+      "output": "Bir öğrenci her gün düzenli çalışırsa, bir öğrenci her gün kendi içinde bir öğrenci olmak için, her gün bir öğrenci (birkaç bin) veya bir öğrenci (birkaç bin) olarak tanımlanır.\n\nTarihçe \nBu, öğrenci her zaman bir öğrenci olan veya öğrenci her yıl bir öğrenci iken, öğrenci ve öğretmenden oluşan bir öğrenci sınıfına kadar olan öğrenci topluluğudur (bkz.). Bununla birlikte, üniversite öğrencileri, öğrencilerin kendi içinde ve kendi içinde veya diğer bireylerin, bu mesleklere ait olmayan öğrencilerin veya öğrencilerin, öğrencilerden oluşan bir öğrenci ya da öğrenci yetiştirici bir eğitim aracı olarak, öğrenci yetiştiricileri ve öğrenci ve öğrenci olarak kabul edilirler.\n\nAyrıca bakınız \n öğrenci eğitim",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B16",
+      "category": "B",
+      "prompt": "Müzik dinlemek insanı",
+      "expected_behavior": "Müziğin etkisi hakkında devam.",
+      "output": "Müzik dinlemek insanı, dinlemek ve din için kullanılan bir dindir.\n\nMüzik",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B17",
+      "category": "B",
+      "prompt": "Deniz kenarında yürümek",
+      "expected_behavior": "Deniz yürüyüşünün tadı ya da etkisi hakkında devam.",
+      "output": "Deniz kenarında yürümek, bir gün boyunca yolculuk yapılabilecek bir yerdir. Şehir, her gün farklı bir gün boyunca gezmek üzere tasarlanmış bir dizi evidir.\n\nYıkılma \nT.Ö. 800 civarında, bu şehir, bir gece boyunca gezmek üzere inşa edilmiştir. Aynı zamanda kent merkezindeki evler olarak da kabul edilir. Şehir, her gün aynı zamanda şehrin kuzey kesiminde bir kale ve bir başka kule olarak da kabul edilir. Şehir, şehrin kuzey kesiminde konumlanır. Şehir, şehrin güney kesiminde yer alır. Şehir, şehrin kuzey kesiminde yer alır. Şehir, şehrin güney kesimindeki bazı mahalleler ile bağlantıya sahiptir. Şehir, şehrin kuzey batısında yer alır",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B18",
+      "category": "B",
+      "prompt": "Bahar geldiğinde çiçekler",
+      "expected_behavior": "Bahardaki doğa canlanmasıyla ilgili devam.",
+      "output": "Bahar geldiğinde çiçekler, dişiler, gastrik, dişiler, dişiler, dişiler, dişiler, dişiler ve dişiler gibi farklı özelliklere sahip olan (Vücut 1, 3) dişiler veya dişiler gibi iki çeşit dişilerin de dişiler gibi bazı dişiler gibi dişilere sahip olmalarıdır.\n\nKaynakça",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B19",
+      "category": "B",
+      "prompt": "Arkadaşlık hayatta çok önemlidir çünkü",
+      "expected_behavior": "Arkadaşlığın önemi hakkında gerekçe.",
+      "output": "Arkadaşlık hayatta çok önemlidir çünkü bir başka deyişle, kötü ruhlar kendilerini tek bir yerde bırakabilecek bir şekilde, her zaman bir anda veya daha çok zor bir şekilde.\n\nSon olarak, bu tür, kendi kendini yok etmek için bu tür bir tür olarak kabul edilebilir.\n\nAyrıca bakınız \n Bazı kaynaklar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B20",
+      "category": "B",
+      "prompt": "Bir problem çözülürken önce",
+      "expected_behavior": "Problem çözme adımları hakkında devam.",
+      "output": "Bir problem çözülürken önce, problemin bir problem olduğunu kanıtlayan problemin, bir çözümün problem ile çeliştiğini kanıtlayan problemlerin, problemin bir problem olduğunu kanıtlayan problemlerin bir fonksiyon olduğunu kanıtlayan problem, bir problem olduğunu kanıtlayan bir problem olduğunu yazar.\n\nBir problemin, problemin, problemin bir problem olduğunu kanıtlayan problemin veya problemin bir problem olduğunu kanıtlayabileceğini öne sürerler.\n\nPropole'un probleminin bir problem olduğunu kanıtlayan problem, problemin bir problem olduğunu fark eden problemin problem olduğunu fark eder.\n\nBir problemin problem olmadığı, problemin problemin bir problem olduğunu kanıtlayan problem",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B21",
+      "category": "B",
+      "prompt": "Su, yaşam için vazgeçilmezdir çünkü",
+      "expected_behavior": "Suyun önemi hakkında devam.",
+      "output": "Su, yaşam için vazgeçilmezdir çünkü bir yer veya onun hayatta kalmasıyla ilgili bir çalışma için gerekli olan bir bilimsel araştırma alanı olarak kabul edilir. Bu bağlamda Su, insanların doğal olarak hayatta kalmaktan kaçınmasına izin verir. Su, insanların hayvanlarına karşı korumak için bir plan olarak kabul edilir, ancak bu, doğal olarak hayatta kalmaktan kaçınmanın en önemli parçası olarak kabul edilir.\n\nDiğer türler \n Su, su, odun, taş, mineral, toprak, kaya, toprak, mineral, kaya, mineral, taş, kaya, kaya, su, kaya, kaya, kaya, su gibi çeşitli hayvanların parçaları gibi çeşitli şekillerde de bulunabilir.\n Su, su ve hayvan gibi çeşitli doğal",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B22",
+      "category": "B",
+      "prompt": "Sabah erken kalkmak",
+      "expected_behavior": "Erken kalkmanın faydaları ya da güçlükleri hakkında devam.",
+      "output": "Sabah erken kalkmak için kullanılan bir terim, bir kişinin diğer bir kişinin herhangi bir kişinin herhangi bir kişiyi bir araya getireceğini veya onları bir kez daha ortadan kaldıracağını, buna, ancak herhangi bir kişinin kendisini bir araya getireceğini ifade eder.\n\nTanım \n\nSabah, bir kişinin veya kişinin bir kişi tarafından nasıl kaçacağını ifade eder. Bir kişinin kişinin veya kişi tarafından bir kişi tarafından veya kişi tarafından bir kadının veya kişinin bir kişinin birden fazla kişi tarafından, kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından veya kişi tarafından kullanılır.\n\nAyı veya kişi, kişinin",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B23",
+      "category": "B",
+      "prompt": "Ekonomi, bir ülkenin",
+      "expected_behavior": "Ekonomi ve ülke ilişkisi hakkında devam.",
+      "output": "Ekonomi, bir ülkenin ekonomik, kültürel ve sosyal açıdan önemli bir yer edinmiştir.\n\nEkonomi \n\nEkonomi tarım, tarım, balıkçılık, balıkçılık ve tarım gibi sektörleri kapsamaktadır. Bu nedenle tarımın büyük çoğunluğu tarım ve hayvancılıktır.\n\nEkonomi \n\nEkonomi, tarımın en önemli alanlarından biridir. Türkiye Cumhuriyeti'nin ilk turizm merkezidir ve ülkenin en büyük turizm merkezidir.\n\nEkonomi \n\nTürkiye'nin en önemli sanayi bölgesidir. Bu bölgede, büyük sanayi ve tarımda önemli bir yer tutar.\n\nEkonomi \n\nTarımın başlıca geçim kaynağı tarımdır. Türkiye'nin en önemli turizm merkezlerinden biridir. Karadeniz Bölgesi'nde, Akdeniz Bölgesi'nde,",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B24",
+      "category": "B",
+      "prompt": "İnsanlar birbirinden öğrenir çünkü",
+      "expected_behavior": "Sosyal öğrenme hakkında devam.",
+      "output": "İnsanlar birbirinden öğrenir çünkü bir sürü insanın aynı anda yaratıldığını ya da onları bir sürü insanın kendi kendine göremeyeceğini öğrenir.\n\nOyuncu kadrosu ve karakterler \n\nFilm, 19 Temmuz 2012'de vizyona girerek gösterime girdi. Filmin yapım aşamasında, film çekimleri için özel çekimlerde ve dizinin geri kalanı için özel olarak çekildi. Dizinin yönetmeni Tim Burton filmi Danny'nin, Lachine ile oyunun bir arkadaşı olan ve Lachine ile Alberto ile ile Mannis'in filmi ile ve Echo ile ile Alberto ile ile –",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B25",
+      "category": "B",
+      "prompt": "Doğa, gezegenimizin en büyük",
+      "expected_behavior": "Doğanın önemi hakkında devam.",
+      "output": "Doğa, gezegenimizin en büyük, en küçük ve en küçük gezegen olduğunu, Güneş'in yörüngesinde dönen bir gezegen olduğunu ve en küçük gezegen olduğunu gösterir.\n\nBu gezegen, göklerin büyük bir uydusu olduğunu ve göklerin ve kara deliklerin Dünya'ya çok yakın olduğu anlamına geldiğini gösterir. Bu asteroit, Dünya'ya yakın olan gezegenleri temsil eder. Güneş'in yörüngesinde dönen bir gezegen, Dünya'ya yakın bir gezegen olduğunu gösterir. Bu, kuyruklu yıldız benzeri bir gezegen olduğunu gösterir. Bu da, Güneş'in yörüngesinde dönen bir gezegen olduğunu gösterir.\n\nAyrıca bakınız \n Gezegen\n\nKaynakça\n\nDış bağlantılar \n\nDünya'nın yörüngeciliği",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B26",
+      "category": "B",
+      "prompt": "Kış mevsiminde havalar soğur ve",
+      "expected_behavior": "Kış mevsimi hakkında devam.",
+      "output": "Kış mevsiminde havalar soğur ve yağmurların ısı ve nemini emmesidir. Sıcak olan mevsimlerde su ve yağmurların sıcaklık ve sıcaklıkları daha hızlı ve daha sıcak hale getirir.\n\nAyrıca bakınız \n\n Hassas su\n\nKaynakça \n\nSu ve yağmur\nDünya'da su\nDünya'daki su tesisleri\nOlasılık sistemleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B27",
+      "category": "B",
+      "prompt": "Bir roman okurken",
+      "expected_behavior": "Kitap okuma deneyimi hakkında devam.",
+      "output": "Bir roman okurken insandan, hikâye, roman, roman, deneme, roman, deneme, roman, roman, roman gibi çok çeşitli filmler yer almaktadır.\n\nEserleri \nRoman, roman, roman, roman gibi farklı bir isimle kaleme almıştır.\n\nKaynakça \n\nEdebiyat karakterleri\nKurgusal erkek karakterler",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B28",
+      "category": "B",
+      "prompt": "Güneş her sabah doğudan",
+      "expected_behavior": "Güneşin hareketi hakkında devam.",
+      "output": "Güneş her sabah doğudan geçen gökten, bu gün gökyüzüne doğru bir yolculuk yapar. Bu yolculuk her gün gündüz, gece boyunca her gün gündüzse, gökyüzüne doğru bir yolculuk yapar.\n\nKaynakça\n\nDış bağlantılar \n\nAy'da geçen televizyon kanalları\nGüneş",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B29",
+      "category": "B",
+      "prompt": "Spor yapmak hem bedeni hem de",
+      "expected_behavior": "Sporun fiziksel ve zihinsel faydaları hakkında devam.",
+      "output": "Spor yapmak hem bedeni hem de bedenini kontrol etme yeteneğine sahip olan bir tür erkek olarak düşünülebilir.\n\nSpor yapmak, dişi hayvanlarının en yaygın olduğu ve, erkekten bağımsız olarak yaşatan dişi hayvanlardan elde edilen bir tür hayvan türüdür.\n\nSpor yapmak, hem de erkekten bağımsız olarak yapılabilir.\n\nAyrıca bakınız \n Türkiye'nin Kadınlar Bölgesel Amatör Ligi\n\nKaynakça\n\nDış bağlantılar \n\nSpor yapmak",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "B30",
+      "category": "B",
+      "prompt": "İnsanlık tarihi boyunca en büyük buluşlardan biri",
+      "expected_behavior": "Tarihi bir buluş ya da icatla devam.",
+      "output": "İnsanlık tarihi boyunca en büyük buluşlardan biri olan \"İnsanlık Tarihi\" ile bilinen bir olaydır.\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi\n\nİnsanlık tarihi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C01",
+      "category": "C",
+      "prompt": "Türkiye'nin başkenti neresidir?",
+      "expected_behavior": "Ankara.",
+      "output": "Türkiye'nin başkenti neresidir?\n\n\nKaynakça\n\nDış bağlantılar \n Türkiye'de Türkiye'nin başkenti neresidir?\n\nİstanbul'daki karayolları\nTürkiye'de ulaşım\nTürkiye'deki karayolları\nTürkiye'deki metro istasyonları\nİstanbul'da ulaşım",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C02",
+      "category": "C",
+      "prompt": "Gökyüzü hangi renktir?",
+      "expected_behavior": "Mavi.",
+      "output": "Gökyüzü hangi renktir? (ayrıca bir şekilde, bir renk olarak tanımlanır)\n\nBu, genellikle büyük boyuttaki bir çeşitler olarak tanımlanır.\n\nKaynakça \n\nYaban kedisi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C03",
+      "category": "C",
+      "prompt": "Bir yılda kaç ay vardır?",
+      "expected_behavior": "12 ay.",
+      "output": "Bir yılda kaç ay vardır?\n\nİlin en parlak dönemini \nİlin en uzak dönemini, hem de hem de en son olarak hem de en son olarak \nBir yıl önce\n\nKaynakça \n\nTürkiye'de kültür\nTürkiye'deki arkeolojik sitler\nTürkiye'deki arkeolojik sitler",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C04",
+      "category": "C",
+      "prompt": "Bir haftada kaç gün vardır?",
+      "expected_behavior": "7 gün.",
+      "output": "Bir haftada kaç gün vardır?\n\nBöyle bir hafta sonra, iki hafta sonra, 7-10 Haziran günü, 30-30 Haziran gecesi, 12-10 Haziran günü, 12-16 Haziran günü, 11-16 Haziran günü, 12-17 Haziran günü, 10-20 Haziran günü, 19-20 Haziran günü, 21-25 Haziran günü, 18-21 Haziran günü, 18-20 Haziran günü, 16-25 Haziran günü, 21-25 Haziran günü, 10-16 Haziran günü, 22-25 Haziran günü, 20-25 Haziran günü, 24-25 Haziran günü, 25-25 Haziran günü, 25-25 Haziran günü, 25-",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C05",
+      "category": "C",
+      "prompt": "Türkiye hangi kıtada yer alır?",
+      "expected_behavior": "Asya ve Avrupa arasında ya da ikisi de.",
+      "output": "Türkiye hangi kıtada yer alır?\n\nKaynakça\n\nAyrıca bakınız \n Türkiye'de yer alan oluşumlar\n\nDış bağlantılar \nTürkiye'de yer alan oluşumlar\n\nTürkiye'de yer alan oluşumlar\nTürkiye'deki millî parklar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C06",
+      "category": "C",
+      "prompt": "Suyun kimyasal formülü nedir?",
+      "expected_behavior": "H2O.",
+      "output": "Suyun kimyasal formülü nedir?\n Suyun bir kimyasal formül.\n Suyun bir kimyasal formül.\n\nKaynakça \n\nSuyunun",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C07",
+      "category": "C",
+      "prompt": "Türkçe resmi dili olan ülke hangisidir?",
+      "expected_behavior": "Türkiye.",
+      "output": "Türkçe resmi dili olan ülke hangisidir?\n\nAyrıca bakınız\n\nKaynakça \n\nTürk dilleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C08",
+      "category": "C",
+      "prompt": "Güneş sistemi hangi gök cisminin etrafında döner?",
+      "expected_behavior": "Güneş.",
+      "output": "Güneş sistemi hangi gök cisminin etrafında döner?\n\nHer cisim Dünya'nın yer yer yer etrafında döner?\n\nGüneş sistemi, Dünya'nın yer yer etrafında dönen bir gezegendir.\n\nIşıklar: Güneş'in Dünya'nın yer yer etrafında dönen bir gezegendir.\n\nKaynakça \n\nYıldızlar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C09",
+      "category": "C",
+      "prompt": "İstanbul hangi ilde yer alır?",
+      "expected_behavior": "İstanbul ili veya şehri kendisidir.",
+      "output": "İstanbul hangi ilde yer alır?\n\n|- style=\"background-color:#F2F2F2\"\n| align=\"center\" colspan=\"3\" | Toplam seçmen sayısı\n| align=\"center\" colspan=\"7\" | Toplam sandık sayısı\n|- align=\"left\"\n| align=\"center\" colspan=\"3\" | 7.698\n| align=\"center\" colspan=\"7\" | 35\n|-\n|- style=\"background-color:#E9E9E9\"\n|-\n! align=\"center\" colspan=\"4\" | Adaylık\n! align=\"center\" colspan=\"6\" | Sonuçlar\n|- style=\"background-color:#",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C10",
+      "category": "C",
+      "prompt": "Türkiye'de para birimi nedir?",
+      "expected_behavior": "Türk Lirası.",
+      "output": "Türkiye'de para birimi nedir?\n\nKaynakça\n\nDış bağlantılar \n Türkiye para birimi nedir?\n Türkiye para birimi nedir?\n\nTürkiye para birimleri nedir?\nTürkiye para birimleri nedir?\nTürkler\nPosta",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C11",
+      "category": "C",
+      "prompt": "Bir günde kaç saat vardır?",
+      "expected_behavior": "24 saat.",
+      "output": "Bir günde kaç saat vardır?\n\nDiğer ülkelerde, birkaç gün boyunca, bir çocuk, çocuk veya babanın, çocuk sahibi, çocuğun da diğer çocuk sahibi olması gerekmektedir.\n\nÖlüm\n\nKaynakça\n\nDış bağlantılar \n\n Official site\n\nAyrıca bakınız \n\nAnormal",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C12",
+      "category": "C",
+      "prompt": "Kış mevsimi hangi ayları kapsar?",
+      "expected_behavior": "Aralık, Ocak, Şubat (ya da bu aylara değinen yanıt).",
+      "output": "Kış mevsimi hangi ayları kapsar?\n\nKış mevsimi \nKış mevsimi bütün gün ve gün ile gün ile gün ile gün arasında gerçekleşir (UTC+08.00).\n\nKış mevsiminin yaz mevsiminin yaz mevsimine göre yaz mevsiminin yaz mevsimine göre yaz mevsiminin yaz mevsiminin yaz günüdür.\n\nKaynakça \n\nKış mevsimi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C13",
+      "category": "C",
+      "prompt": "Atatürk'ün soyadı nedir?",
+      "expected_behavior": "Atatürk.",
+      "output": "Atatürk'ün soyadı nedir?\nÇözüm: 295 artı 39 = 344",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C14",
+      "category": "C",
+      "prompt": "Türkiye Cumhuriyeti kaç yılında kuruldu?",
+      "expected_behavior": "1923.",
+      "output": "Türkiye Cumhuriyeti kaç yılında kuruldu?\n\nAnkara'da yapılan ilk askerî darbe ile birlikte 7 Nisan 1920'de Türk ordusunun Anadolu'ya karşı yaptığı askerî harekât ve Türk ordusunun Anadolu'ya karşı kazandığı zaferden sonra Osmanlı ordusunun Anadolu'yu terk etmesini sağlamış olan Osmanlı ordusunun durumu büyük bir yenilgidir.\n\nAyrıca bakınız \n Osmanlı İmparatorluğu'nun muharebeleri\n Türkiye'nin muharebeleri\n\nKaynakça \n\nOsmanlı İmparatorluğu'nun muharebeleri\nOsmanlı İmparatorluğu'nun muharebeleri\nOsmanlı yapımı\nMustafa Kemal Paşa",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C15",
+      "category": "C",
+      "prompt": "Ankaranın plaka kodu kaçtır?",
+      "expected_behavior": "06.",
+      "output": "Ankaranın plaka kodu kaçtır?\n\nÖrnekleme:\n\nÖrnekleme:\n\nÖrnekleme:\n\nÖrnekleme:\t1.1\t(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1\n\nÖrnekleme:\t1.1.1\t(1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C16",
+      "category": "C",
+      "prompt": "Türkçe alfabesinde kaç harf vardır?",
+      "expected_behavior": "29 harf.",
+      "output": "Türkçe alfabesinde kaç harf vardır?\n\nAyrıca bakınız\n Türkçe harf\n\nTürkçe soyadları",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C17",
+      "category": "C",
+      "prompt": "Kırmızı ile mavi karıştırılırsa hangi renk elde edilir?",
+      "expected_behavior": "Mor.",
+      "output": "Kırmızı ile mavi karıştırılırsa hangi renk elde edilir?\n\nKırmızı ile kırmızı arasında bir renk elde edilir.\n\nKırmızı, siyah, sarı, beyaz, sarı ya da mavi renk ile renklidir. Beyaz, beyaz renk, beyaz, beyaz, mavi ve renksizdir.\n\nKırmızı, yeşil, mavi, sarımsı, kırmızı, beyaz, koyu kırmızı ve kırmızı, beyaz, turuncu ve yeşil renklidir.\n\nKırmızı, siyah ve beyaz renk, siyah, sarı, sarı veya kırmızı, siyah ve mavi renksiz, mavi, sarı ve kırmızı renksizdir.\n\nKırmızı, yeşil, siyah ve mavi renk, siyah, kırmızı, mavi ve yeşil renksizdir.\n\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C18",
+      "category": "C",
+      "prompt": "Dünya kaç derecede güneşin etrafında döner?",
+      "expected_behavior": "360 derece veya ilgili yanıt.",
+      "output": "Dünya kaç derecede güneşin etrafında döner?\n\nDünya kaç derece çok güneş altında, Dünya'nın etrafındaki en yüksek hızda koşar. Bu, Dünya'nın Güneş'e olan uzaklığı ve bu dönüş Dünya'nın Dünya'yı, Dünya'yı ve Dünya'yı birbirine bağlayan ve Dünya'nın yörüngesine göre Dünya'nın Dünya'yı, Dünya'yla olan uzaklığı ile Dünya'ya doğru koşar. Güneşin, Dünya'nın Dünya'yı, Dünya'ya göre Dünya'nın yörüngesidir.\n\nDünya'da, Dünya'nın Güneş'e olan uzaklığı, Dünya'yı Dünya'yı ve Dünya'yı Dünya'yla birleştiren Güneş'in Dünya",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C19",
+      "category": "C",
+      "prompt": "En yüksek Türk dağı hangisidir?",
+      "expected_behavior": "Ağrı Dağı.",
+      "output": "En yüksek Türk dağı hangisidir? (Çünkü bu demektir.)\n\nAyrıca bakınız \n En yüksek dağı",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C20",
+      "category": "C",
+      "prompt": "Bir üçgenin iç açıları toplamı kaçtır?",
+      "expected_behavior": "180 derece.",
+      "output": "Bir üçgenin iç açıları toplamı kaçtır?\nÇözüm: x = 170 eksi 47 = 130",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C21",
+      "category": "C",
+      "prompt": "Türkiye'nin ulusal sporu hangisidir?",
+      "expected_behavior": "Yağlı güreş (kabul edilebilir yanıtlar var).",
+      "output": "Türkiye'nin ulusal sporu hangisidir?\n\nSpor \nTürkiye'nin millî sporu, ilk kez 1993 yılında Türkiye'nin İstanbul'da düzenlenen 1994 Avrupa Futbol Şampiyonası'nın şampiyonu oldu.\n\nTürkiye, Türkiye'nin millî basketbol takımı, 2004 Avrupa Futbol Şampiyonası'nı, 2005 Avrupa Futbol Şampiyonası'nı kazandı.\n\nDış bağlantılar \n Türkiye millî basketbol takımı\n\nKaynakça \n\nTürkiye'de spor\nTürkiye",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C22",
+      "category": "C",
+      "prompt": "Domates bir meyve midir yoksa sebze midir?",
+      "expected_behavior": "Botanik açıdan meyve; mutfakta sebze (ya da kısa yanıt).",
+      "output": "Domates bir meyve midir yoksa sebze midir? 'den 'ye kadar çıkmayan bir gıda midir?' olarak nitelendirilir? 'den 'a kadar olan insan, bu tür, özellikle de iç içe geçmiş bir gıda ve doğal olarak tüketiliyor?'dan 'a kadar olan su.\n\nKaynakça \n\nCinsellikle ilgili yemekler\nİncelenmemiş çeviri içeren sayfalar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C23",
+      "category": "C",
+      "prompt": "Türkiye'nin en uzun nehri hangisidir?",
+      "expected_behavior": "Kızılırmak.",
+      "output": "Türkiye'nin en uzun nehri hangisidir?\n\nTabakalanma \n\nTabakalanma 18. yüzyılın ortalarına doğru bir dönem olmuştur. Daha önceki yıllara göre de bu akarsuların göllerin en az bir bölümü ve vadinin en önemli vadisidir.\n\nTabakalanma \n\nTabakalanma 18. yüzyılın ortalarında gerçekleşmiştir. Bir süre sonra da, Türkiye'nin ikinci büyük nehridir.\n\nTabakalanma \n\nTabakalanma ve sıcaklık \n\nTabakalanma, Türkiye'nin en uzun nehridir ve bu nedenle Karadeniz'den Karadeniz'e kadar uzanır.\n\nTabakalanma \n\nTabakalanma 18. yüzyıl sonlarına doğru başlanmıştır. Bu tarihlerde, Samsun",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C24",
+      "category": "C",
+      "prompt": "Güneşin ışığı yere kaç dakikada ulaşır?",
+      "expected_behavior": "Yaklaşık 8 dakika.",
+      "output": "Güneşin ışığı yere kaç dakikada ulaşır?\n\n\"En iyi erkek\"\n\"En iyi kadın\"\n\"En iyi erkek\"\n\"En iyi erkek\"\n\"En iyi erkek\"\n\"En başarılı kadın\"\n\"En iyi kadın\"\n\"En iyi erkek\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi erkek\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n\"En iyi kadın\"\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "C25",
+      "category": "C",
+      "prompt": "İnsan vücudunda kaç kemik vardır?",
+      "expected_behavior": "206 kemik (ya da yaklaşık değer).",
+      "output": "İnsan vücudunda kaç kemik vardır?\n\nEğer bir su veya su, suyun içine dalarak ya da su, suyun içine dalarak meydana getirir.\n\nKaynakça\n\nDış bağlantılar \n\nHayvan anatomisi\nİnsan anatomisi\nPlastik anatomi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D01",
+      "category": "D",
+      "prompt": "Sadece 'Evet' veya 'Hayır' de: Türkiye Asya'da mı?",
+      "expected_behavior": "Kısa bir Evet ya da Hayır yanıtı (Evet beklenir).",
+      "output": "Sadece 'Evet' veya 'Hayır' de: Türkiye Asya'da mı? \n\nBu dil, Türk lehçesinde, Türkiye'nin Avrupa'ya özgü bir dildir. Bu dil, Türk lehçesinin bir biçimidir. Türk'e özgü bir dildir.\n\nKaynakça",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D02",
+      "category": "D",
+      "prompt": "Sadece 'Evet' veya 'Hayır' de: Gökyüzü yeşil midir?",
+      "expected_behavior": "Hayır.",
+      "output": "Sadece 'Evet' veya 'Hayır' de: Gökyüzü yeşil midir? '\n\nAyrıca bakınız\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n\nKaynakça\n\nDış bağlantılar \n\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n I. Dünya Savaşı'nda Alman savaş gemileri listesi\n\nII. Dünya Savaşı",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D03",
+      "category": "D",
+      "prompt": "Bana 3 meyve say.",
+      "expected_behavior": "3 meyve adı saymalı.",
+      "output": "Bana 3 meyve say.\n\nAyrıca bakınız \n Bakla\n\nDış bağlantılar \n\nAminoloji",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D04",
+      "category": "D",
+      "prompt": "Bana 3 renk say.",
+      "expected_behavior": "3 renk adı saymalı.",
+      "output": "Bana 3 renk say. (İngilizce: A Very Man, A Very Man), \"Ben çok iyi bir şey\", \"Bir şey\" gibi parçaların aynı renklere sahip olması konusunda bir karardır.\n\nBazı versiyonlarda, ses kayıtları, ses kayıtları, fotoğraflar ve fotoğraf kayıtları gibi farklı türlerde ve videolarla birlikte yazılmıştır.\n\nVideo \n\nSevgili Adam\n\nVideo oyunları \n\nCBS\n\nCBS\n\nCBS\n\nCBS\n\nB\n\nCBS\n\nCBS\n\nCBS\n\nCBS\n\nCBS\n\nCBS\n\nCBS\n\nCBS\n\nCBS\n\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D05",
+      "category": "D",
+      "prompt": "Türkiye hakkında tek cümle yaz.",
+      "expected_behavior": "Tek, doğru, anlamlı bir cümle.",
+      "output": "Türkiye hakkında tek cümle yaz. Söylemedeki cümlede, \"sonuçlanan cümle\" (hikâz) şeklinde de yazılır.\n\nSözleri:\n\n \"Bir cümle, cümlede, bir cümlede, bir cümlede, bir cümlede bir cümlede, bir cümlede, bir cümlede olan cümlede, bir cümlede ise, bir cümlede, bir cümlede, bir cümlede veya bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede, bir cümlede",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D06",
+      "category": "D",
+      "prompt": "Kısa bir tanımlama yap: Kitap nedir?",
+      "expected_behavior": "Kısa ve doğru bir tanım.",
+      "output": "Kısa bir tanımlama yap: Kitap nedir?\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n \"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n\n\"Kısa bir açıklama yap\"\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D07",
+      "category": "D",
+      "prompt": "Bana yalnızca bir kelimeyle cevapla: Türkiye'nin başkenti?",
+      "expected_behavior": "Ankara.",
+      "output": "Bana yalnızca bir kelimeyle cevapla: Türkiye'nin başkenti?\n\n\"Bana bir kelimeyle, bir kelimeyle yazılmış bir terim olan \"Bana bir kelime kaynağı. Türk mitolojisinde, bu iki kelimeyle yazılan bir sözcük. Türk mitolojisinde, bu iki kelimeyle yazılmış bir kelime. Türkiye'de Türkçe olarak \"Ben, aynı kelimeyle yazılmış bir kelime. Bir Türk mitolojisinde.\"\n\n\"Bana bir kelime kaynağı; \"O, her bir kelimeyle yazılmış bir kelime. Türk mitolojisinde, \"Benim, bu iki kelimeyle yazılmış, aynı kelimeyle yazılmış bir kelime. Türk mitolojisinde, \"O, bir kelimeyle yazılmış bir kelime. Türk mitolojisinde, iki kelimeyle yazılmış bir kelime. Türk mitolojisinde, halk arasında",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D08",
+      "category": "D",
+      "prompt": "Şu cümleyi olumlu hale getir: Bu iş çok zor.",
+      "expected_behavior": "Bu iş çok kolay ya da buna yakın yanıt.",
+      "output": "Şu cümleyi olumlu hale getir: Bu iş çok zor.\n\nKaynakça\n\nAyrıca bakınız \n Gastronomi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D09",
+      "category": "D",
+      "prompt": "Bana bir selamlama cümlesi yaz.",
+      "expected_behavior": "Merhaba, günaydın veya benzer selamlama cümlesi.",
+      "output": "Bana bir selamlama cümlesi yaz.\n\nBu cümleye ne de cümlenin bir cümlede bir bağıntıya sahip olduğunu ve eğer cümlede bir bağıntıya sahip olduğunu bilirim.\n\nAyrıca bakınız \n Bana bir bağıntı\n\nKaynakça \n\nFerih\nSözel müzik\nTürkçe albümler\nTürk müzik albümleri\nTürkçe albümler",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D10",
+      "category": "D",
+      "prompt": "Şu kelimenin zıt anlamlısını söyle: Büyük",
+      "expected_behavior": "Küçük.",
+      "output": "Şu kelimenin zıt anlamlısını söyle: Büyük, büyük veya iyi insanlar, ancak, sadece küçük insanlar, sadece küçük insanlar veya diğer her biri veya farklı bir kişiyi de kendi kendini veya yegekten ayırmakla ya da, her insan için büyük bir veya çok farklı davranıştan kaçınmaktır. \n\nBaşka bir şey, kişinin, kişinin veya başka iki kişinin, kişinin veya başka bir kişinin kendi kendini nasıl yapacağına karar verdiğidir. Bu, kişinin ya da ne kadar iyi ve iyi bir insana sahip oldukları veya aynı zamanda kendi kendini nasıl yapacağına karar verdiğidir.\n\nHer insanın, bir kişinin veya başka bir kişinin, aynı anda var olduğunu, ancak aynı anda var olmadığını, ancak aynı zamanda",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D11",
+      "category": "D",
+      "prompt": "Şu kelimenin eş anlamlısını söyle: Güzel",
+      "expected_behavior": "Hoş, şirin, latif vb.",
+      "output": "Şu kelimenin eş anlamlısını söyle: Güzel, iyi, iyi-büyüp veya kişisel değildir. \nSoğunun nasıl olduğu ve sevgiyle ilgili bir konudur. \nSoğundaki gibi, zaman zaman zaman bir iş değildir. \nSoğunun ne olduğu konusunda büyük bir fark vardır. \nSoğunun, bir şey değildir. \nSoğunun bilinmesi ve bilinmesi, bir iş değildir. Bu durumda, her şeyi biliyoruz.\n\nAyrıca bakınız \n\n Tetik\n\nKaynakça \n\nKlasik hukuk\nMatematik terimleri\nMatematiksel kavramlar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D12",
+      "category": "D",
+      "prompt": "Bana 5 sayıdan oluşan bir liste yaz.",
+      "expected_behavior": "5 sayı sıralaması.",
+      "output": "Bana 5 sayıdan oluşan bir liste yaz.\n\nAyrıca bakınız \n Bana 5\n\nKaynakça \n\nYaz\nYaz",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D13",
+      "category": "D",
+      "prompt": "Bu cümleyi soru haline getir: Türkiye büyük bir ülkedir.",
+      "expected_behavior": "Türkiye büyük bir ülke midir?",
+      "output": "Bu cümleyi soru haline getir: Türkiye büyük bir ülkedir.\n\nKaynakça \n\nOnu\nTürkçe deyişler",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D14",
+      "category": "D",
+      "prompt": "Aşağıdaki kelimeleri alfabetik sıraya diz: elma, armut, kivi",
+      "expected_behavior": "Armut, elma, kivi.",
+      "output": "Aşağıdaki kelimeleri alfabetik sıraya diz: elma, armut, kivi, vandal, vb.\n\nHer bir kişinin, bir kişi tarafından, bir kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi tarafından, kişi",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D15",
+      "category": "D",
+      "prompt": "Bu cümleyi geçmiş zamana çevir: Ali okula gidiyor.",
+      "expected_behavior": "Ali okula gitti.",
+      "output": "Bu cümleyi geçmiş zamana çevir: Ali okula gidiyor.\n\nBen bu cümleyi söyleyen kişiler:\n\nAyrıca bakınız \n Ali, Ali\n Ali, Ali\n Ali, Ali\n Ali, Ali\n Ali, Ali, Ali\n Ali, Ali\n Ali, Ali\n Ali, Ali, Ali\n Ali, Ali\n Ali, Ali, Ali\n Ali, Ali\n Ali, Ali, Ali\n Ali, Ali, Ali\n Ali, Ali\n Ali, Ali, Ali\n Ali, Ali, Ali\n Ali, Ali, Ali\n Ali, Ali, Ali, Ali\n Ali, Ali, Ali\n Ali, Ali, Ali\n Ali, Ali, Ali, Ali, Ali\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D16",
+      "category": "D",
+      "prompt": "Sadece bir renk söyle.",
+      "expected_behavior": "Tek bir renk adı.",
+      "output": "Sadece bir renk söyle.\n\nMücadele, her yıl 15 Aralık 2018'de düzenlenen 6. Eurovision Şarkı Yarışması'nda Belçika'yı temsil etmiştir.\n\nGörevdeki ülkeler ve ülkeler\nBir sonraki Avrupa ülkeleri (Almanya, Birleşik Krallık, Fransa, İtalya, İspanya, İspanya ve Birleşik Krallık) ve Avrupa Yayın Birliği üyesidir.\n\nGeçmişi \n\n2018 yarışması'ndan önce, Hollanda Eurovision Şarkı Yarışması'na elli dört kez katılmış, ilk katılımını 1964 yılında gerçekleştirmiştir. Hollanda, Avusturya'nın \"Souff\" adlı şarkısıyla 1971 yılından bu yana almıştır. En son 2020 yılında \"I'm a cruce\" adlı şarkısıyla yarı finalde 2. olarak finale",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D17",
+      "category": "D",
+      "prompt": "Bana kısa bir veda cümlesi yaz.",
+      "expected_behavior": "Görüşürüz, hoşça kal vb.",
+      "output": "Bana kısa bir veda cümlesi yaz.\n\nAyrıca bakınız\nAşkım\n\nKaynakça \n\nTürkçe şarkılar\nTürkçe şarkılar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D18",
+      "category": "D",
+      "prompt": "Şu sayıyı yazıyla yaz: 42",
+      "expected_behavior": "Kırk iki.",
+      "output": "Şu sayıyı yazıyla yaz: 42.\n\nKural, \nBu sayı ilk defa yazılmaya başlanmıştır.\n\n Her simi ki  = \nBu sayı ilk defa yazılmaya başlanmıştır. Ancak yazımın bittiğini ispat etmiştir.\n\nDiğer \n1.\n\n2.\n\n4.\n\n6.\n\n6.\n\n8.\n\n8.\n\n8.\n\n8.\n\n8.\n\n9.\n\n10.\n\n10.\n\n10.\n\n10.\n\n10.\n\n10.\n\n11.\n\n11.\n\n14.\n\n15.",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D19",
+      "category": "D",
+      "prompt": "Bu kelimenin kaç harfi var: Ankara",
+      "expected_behavior": "6 harf.",
+      "output": "Bu kelimenin kaç harfi var: Ankara'da bulunan sözcükler\n\nTürk mitolojisi\nTürkçe deyişler",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D20",
+      "category": "D",
+      "prompt": "Bana kısa bir teşekkür cümlesi yaz.",
+      "expected_behavior": "Teşekkür ederim ya da benzer.",
+      "output": "Bana kısa bir teşekkür cümlesi yaz.\n\n\"Bana kısa bir teşekkür\" dedi.\n\nSözleri, İbrahim'e, \"Bir şey yapmak için her şey yapmak\" dedi.\n\n\"Bana, cevap vermek için bir şey yapmak\" dedi.\n\n\"Benim için, bir şey yapmak için bir şey yapmak, bir şey yapmak için bir şey yapmak\" dedi.\n\nKaynakça\n\nDış bağlantılar \n\n \"Bana kısa bir teşekkür\"  - Youtube \n\nTürk müzik grupları\nTürk müzik grupları\nTürk müzik grupları\nYaşayan insanlar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D21",
+      "category": "D",
+      "prompt": "Sadece bir hayvan adı söyle.",
+      "expected_behavior": "Tek bir hayvan adı.",
+      "output": "Sadece bir hayvan adı söyle.\n\nKaynakça \n\nBu madde, bir hayvan adı silme veya başka bir hayvan ismi ya da bir hayvan ismi, bir ya da başka bir hayvan adı veya başka bir hayvan adı veya başka bir hayvan adı.\n\nTürlerine göre hayvan ismi, bir hayvan adı veya başka bir hayvan adı.\n\nTürlerine göre hayvan adı, bir hayvan ismi, bir hayvan adı\n\nTürlerine göre hayvan adı, bir hayvan adı veya bir hayvan adı.\n\nTürlerine göre hayvan adı, bir hayvan adı, bir hayvan adı veya bir hayvan adı.\n\nAyrıca bakınız \n Doğal hayvan ismi\n Hayvan ismi\n Hayvan adları\n Hayvan isimleri listesi",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D22",
+      "category": "D",
+      "prompt": "Şu iki sayıdan büyük olanı söyle: 15 ve 27",
+      "expected_behavior": "27.",
+      "output": "Şu iki sayıdan büyük olanı söyle: 15 ve 27.\n\n 1-14-24.\n 0-19.\n 0-19.\n 0-21.\n 0-20.\n 0-21.\n 0-22.\n 0-22.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-22.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.\n 0-21.",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D23",
+      "category": "D",
+      "prompt": "Bana bir özür cümlesi yaz.",
+      "expected_behavior": "Özür dilerim ya da benzer.",
+      "output": "Bana bir özür cümlesi yaz.\n\nYılanım\n\nAdım\n\nAdım\n\nBayanlar\n\nBayanlar\n\nBayanlar\n\nDurum\n\nDurum\n\nÇerme\n\nDurum\n\nSöy\n\nHoşkun\n\nBayanlar\n\nDurum\n\nDurum\n\nDurum\n\nÇerme\n\nHoşkun\n\nDurum\n\nDurum\n\nÇerme\n\nSeven\n\nDurum\n\nDurum\n\nÇerme\n\nDurum\n\nÇerme\n\nDurum\n\nDurum\n\nDurum",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D24",
+      "category": "D",
+      "prompt": "Şu cümlenin öznesi nedir: Ayşe markete gitti.",
+      "expected_behavior": "Ayşe.",
+      "output": "Şu cümlenin öznesi nedir: Ayşe markete gitti.\n\nBu cümlenin öznesi nedir?\n\nAyrıca bakınız \n Bilmes\n\nKaynakça \n\nDergiler\nFelsefi kavramlar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "D25",
+      "category": "D",
+      "prompt": "Bana 3 madde halinde bir plan yaz: Güne nasıl başlanır?",
+      "expected_behavior": "3 maddeli kısa plan.",
+      "output": "Bana 3 madde halinde bir plan yaz: Güne nasıl başlanır?\n\nBu eserden ilk kez İstanbul'da basılan, ilk defa, İstanbul'un Fethi dönemi ve İstanbul Üniversitesi'nde basılan ilk kitap olmuştur.\n\nKonu \nMustafa Kemal Paşa, bir yandan savaş sırasında, bir yandan da bir yandan da bir yandan da savaştığı bir dönemde, bir yandan da asker ve asker olarak görev yapar. Savaş sırasında bir yandan da asker yararı olan İstanbul'a götürülür. Askerlerin başında da asker yararı olan Mustafa Kemal, ordugahında bulunan ve savaş esnasında, o dönemde tüm ordugahsız kalan askerlerin de bulunduğu bir sırada, asker yararı ve başörtüsü yoktur.\n\nMustafa Kemal",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E01",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Türkiye, Asya ve Avrupa kıtalarında toprakları bulunan bir ülkedir. Başkenti Ankara, en büyük şehri ise İstanbul'dur. Nüfusu 85 milyonu aşmaktadır.'",
+      "expected_behavior": "Metnin dışına çıkmadan kısa özet.",
+      "output": "Şu metni özetle: 'Türkiye, Asya ve Avrupa kıtalarında toprakları bulunan bir ülkedir. Başkenti Ankara, en büyük şehri ise İstanbul'dur. Nüfusu 85 milyonu aşmaktadır.'dir.\n\nTürkiye, Avrupa kıtasındaki en büyük ülkedir.\n\nKaynakça\n\nDış bağlantılar \n Türkiye'deki bölgeleri\n Ankara",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E02",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Su, canlılar için hayati öneme sahiptir. İnsan vücudunun büyük bir kısmı sudan oluşur. Susuz yaşam mümkün değildir.'",
+      "expected_behavior": "Suyun önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Su, canlılar için hayati öneme sahiptir. İnsan vücudunun büyük bir kısmı sudan oluşur. Susuz yaşam mümkün değildir.'\n\nKaynakça \n\nİnsan anatomisi\nİnsan anatomisi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E03",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Kitap okumak, kelime dağarcığını geliştirir ve hayal gücünü besler. Düzenli okuma, insanı hem bilgi hem de ifade açısından zenginleştirir.'",
+      "expected_behavior": "Kitap okumanın faydaları üzerine kısa özet.",
+      "output": "Şu metni özetle: 'Kitap okumak, kelime dağarcığını geliştirir ve hayal gücünü besler. Düzenli okuma, insanı hem bilgi hem de ifade açısından zenginleştirir.' (örneğin, \"Giyim\", \"İnsan\" gibi).\n\nBereket'e \nRoman, yazarın, o sırada bir kadın olduğunu ve \"Senin\" de bunu yaptığını belirtir. Kitap, yazarın yazdığı, aynı zamanda \"Bereket\" adlı eserde bir kadın olduğunu söyler. Kitap, yazarın bu kitap hakkında pek çok bilgi vardır. Kitabın bir kısmı, kitabın ikinci kısmı, kitabın bir kısmı, bir kısmı, kitabın üçüncü kısmı, kitabın ikinci kısmının ise, kitabın üçüncü kısmı veya son kısmıdır. Kitap aynı zamanda kitaptaki \"Bereket\", \"Bereket\" ve \"Bereket\" gibi bazı diğer insanların da \"Bereket\" gibi",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E04",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Güneş, Dünya'nın enerji kaynağıdır. Güneş ışığı olmadan bitkiler büyüyemez, hayvanlar beslenemez ve insan yaşamı sürdürülemez.'",
+      "expected_behavior": "Güneşin önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Güneş, Dünya'nın enerji kaynağıdır. Güneş ışığı olmadan bitkiler büyüyemez, hayvanlar beslenemez ve insan yaşamı sürdürülemez.'\n\nEğer güneş ışığı (katı) ve güneş ışığı, Güneş'in atmosferindeki ışığı, Dünya'nın etrafında dönen ışıkla olan ilişkileridir. Güneş'in güneş ışığı ile olan ilişkileri, Güneş ile olan ilişkisini, Güneş'in Güneş'in en parlak ve en parlak atmosferine sahip olan en parlak noktası olduğunu gösteriyor. Güneş'in Güneş'in Güneş'in Güneş'in Güneş'in Güneş'in güneş ışığı ile olan ilişkileri olduğunu gösteriyor. Güneş'in Güneş'in Güneş'in Güneş'in güneş ışığı ile olan ilişkisinde gözlemlenmesi, Güneş'in Güneş'in Güneş ile olan ilişkilerini ve güneş ışığı ile olan",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E05",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Sağlıklı beslenmek için sebze, meyve ve tahılları düzenli tüketmek gerekir. Aşırı şeker ve yağ tüketimi sağlığa zarar verir.'",
+      "expected_behavior": "Sağlıklı beslenme hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Sağlıklı beslenmek için sebze, meyve ve tahılları düzenli tüketmek gerekir. Aşırı şeker ve yağ tüketimi sağlığa zarar verir.'\n\nKaynakça \n\nKeltler\nBeninler\nTürlerine göre sebze",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E06",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Teknoloji, insanların hayatını hem kolaylaştırmış hem de bazı sorunlar doğurmuştur. İnternet ve akıllı cihazlar iletişimi hızlandırırken bağımlılık riskini de artırmıştır.'",
+      "expected_behavior": "Teknolojinin faydaları ve zararları hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Teknoloji, insanların hayatını hem kolaylaştırmış hem de bazı sorunlar doğurmuştur. İnternet ve akıllı cihazlar iletişimi hızlandırırken bağımlılık riskini de artırmıştır.'\n\nAyrıca bakınız\n Bilgi politikası\n\nDış bağlantılar \n Uluslararası Bilgi Teknolojileri Ajansı - Dünyanın ilk teknoloji ve araştırma kuruluşudur.\n\nKaynakça \n\nİnternet",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E07",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Egzersiz yapmak kalp sağlığını korur, stresi azaltır ve bağışıklık sistemini güçlendirir. Haftada en az 150 dakika orta yoğunlukta hareket edilmesi önerilmektedir.'",
+      "expected_behavior": "Egzersizin faydaları hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Egzersiz yapmak kalp sağlığını korur, stresi azaltır ve bağışıklık sistemini güçlendirir. Haftada en az 150 dakika orta yoğunlukta hareket edilmesi önerilmektedir.'\n\nKaynakça \n\nİnsan hastalıkları\nPsikoterapi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E08",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Dil, insanların düşüncelerini ifade etmesini sağlayan en önemli araçtır. Dil olmadan iletişim ve kültür aktarımı mümkün olmaz.'",
+      "expected_behavior": "Dilin önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Dil, insanların düşüncelerini ifade etmesini sağlayan en önemli araçtır. Dil olmadan iletişim ve kültür aktarımı mümkün olmaz.'\n\nDil",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E09",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Ormansızlaşma, ekosistem dengesini bozmakta ve iklim değişikliğine katkıda bulunmaktadır. Her yıl milyonlarca ağaç yok olmaktadır.'",
+      "expected_behavior": "Ormansızlaşmanın olumsuz etkileri hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Ormansızlaşma, ekosistem dengesini bozmakta ve iklim değişikliğine katkıda bulunmaktadır. Her yıl milyonlarca ağaç yok olmaktadır.'\n\nTürkiye'de su taşımacılığı\nTürkiye'de su taşımacılığı\nTürkiye'de su taşımacılığı\nTürkiye'de su ulaşımı",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E10",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Eğitim, toplumun gelişmesinde temel bir rol oynar. Eğitimli bireyler hem kendi yaşamlarını hem de çevrelerini olumlu yönde etkiler.'",
+      "expected_behavior": "Eğitimin önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Eğitim, toplumun gelişmesinde temel bir rol oynar. Eğitimli bireyler hem kendi yaşamlarını hem de çevrelerini olumlu yönde etkiler.'\n\nKaynakça \n\nAyrıca bakınız \n\n Eğitim",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E11",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Müzik, insanların duygularını ifade ettiği evrensel bir dil olarak kabul edilir. Her kültürde farklı müzik biçimleri bulunmaktadır.'",
+      "expected_behavior": "Müziğin evrenselliği hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Müzik, insanların duygularını ifade ettiği evrensel bir dil olarak kabul edilir. Her kültürde farklı müzik biçimleri bulunmaktadır.'\n\nDil \n\nDil, her zaman bu dil ve müziği ifade etmek için bir dizi farklı dil olarak kabul edilir. Bu dil, aynı dili ifade eder ve bu dil veya müzik terimleri arasında bir bağlantı olabilir. Örneğin  sözcüğü aynı dilden gelen \"sac\" ve \"sac\" gibi kelime anlamı taşıyan sözcüklerin, daha sonra telaffuz edildiği kelimelerden türetilmiştir. Dilin anlamı, dil veya müzik, Türkçede bir dilin veya bir dilin ortak harfini ifade eden bir anlam olduğu ile ifade edilir.\n\nDil, dil, müzik ve müzik arasındaki ilişkiler için farklı dillerden gelen (bazen de \"sac\" olarak da adlandırılır) ve bu dilin",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E12",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Uykusuzluk, dikkat eksikliğine, bağışıklık sisteminin zayıflamasına ve ruh hali değişikliklerine yol açar. Yetişkinlerin günde en az 7-8 saat uyuması önerilir.'",
+      "expected_behavior": "Uyku eksikliğinin olumsuz etkileri hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Uykusuzluk, dikkat eksikliğine, bağışıklık sisteminin zayıflamasına ve ruh hali değişikliklerine yol açar. Yetişkinlerin günde en az 7-8 saat uyuması önerilir.'\n\nHer şey bilinmemektedir. (Nedeni)\n\nKayna, bu nedenle, bu tür, çoğu zaman tek başına bir yaşam kalitesini azaltmaya ve bu nedenle de, bu tür bir yaşam alanı olarak da kullanılabilir.\n\nAyrıca bakınız \n Gözyaşı\n\nKaynakça \n\nTıp ve psikoloji",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E13",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Çevre kirliliği, doğal kaynakların aşırı tüketimi ve sanayi atıkları sonucunda artmaktadır. Bu durum bitki, hayvan ve insan sağlığını tehdit etmektedir.'",
+      "expected_behavior": "Çevre kirliliğinin nedenleri ve etkileri hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Çevre kirliliği, doğal kaynakların aşırı tüketimi ve sanayi atıkları sonucunda artmaktadır. Bu durum bitki, hayvan ve insan sağlığını tehdit etmektedir.' (bkz. İnsan sağlığı ve çevresel tehdit).\n\nAyrıca bakınız \n Hayvan sağlığı\n\nKaynakça\n\nDış bağlantılar\n\nAyrıca bakınız \nTürkiye'de hayvan sağlığı\nHayvan sağlığı\nİnsan sağlığı\nHayvan sağlığı\nİnsan sağlığı\n\nKaynakça \n\nİnsan sağlığı\nHayvan sağlığı",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E14",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Tarih boyunca insanlar savaşlardan çıkardıkları derslerle yeni kurumlar ve anlaşmalar oluşturmuştur. Barışın korunması için iş birliği şarttır.'",
+      "expected_behavior": "Tarihten ders çıkarma ve barışın önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Tarih boyunca insanlar savaşlardan çıkardıkları derslerle yeni kurumlar ve anlaşmalar oluşturmuştur. Barışın korunması için iş birliği şarttır.'\n\nAyrıca bakınız \n\n Barışın korunması\n Barışın korunması\n\nKaynakça\n\nDış bağlantılar \n\n Barışın korunması ve korunması\n Barışın korunması ve korunması\n Barışın korunması ve korunması\n\nKaynakça\n\nAyrıca bakınız \n Barışın korunması ve korunması\n Barışın korunması\n Barışın korunması ve korunması\n Barışın korunması\n Barışın korunması ve korunması\n Barışın korunması\n Barışın korunması\n Barışın korunması ve korunması\n\nKaynakça",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E15",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Yenilenebilir enerji kaynakları, fosil yakıtlara göre çok daha az çevre kirliliği yaratır. Güneş ve rüzgar enerjisi bu kaynakların başında gelir.'",
+      "expected_behavior": "Yenilenebilir enerjinin avantajları hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Yenilenebilir enerji kaynakları, fosil yakıtlara göre çok daha az çevre kirliliği yaratır. Güneş ve rüzgar enerjisi bu kaynakların başında gelir.'\n\nKaynakça \n\nMars'taki yapılar\nMars\nMars jeolojisi\nDünya'da enerji\nMars jeolojisi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E16",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Arkadaşlık, insanın mutlu ve sağlıklı bir yaşam sürmesinde önemli bir etkendir. Paylaşım ve güven, sağlam bir arkadaşlığın temelidir.'",
+      "expected_behavior": "Arkadaşlığın önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Arkadaşlık, insanın mutlu ve sağlıklı bir yaşam sürmesinde önemli bir etkendir. Paylaşım ve güven, sağlam bir arkadaşlığın temelidir.'\n\nZaman, bu tür bir olay, her türlü yeni bir şekilde nasıl hareket ettiğini anlatabilir.\n\nAyrıca bakınız \n İnsanlık\n\nKaynakça \n\nİnsanlık",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E17",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Yaratıcı düşünme, sorunlara alışılmışın dışında çözümler bulmayı sağlar. Bu beceri hem iş yaşamında hem de günlük hayatta büyük değer taşır.'",
+      "expected_behavior": "Yaratıcı düşüncenin önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Yaratıcı düşünme, sorunlara alışılmışın dışında çözümler bulmayı sağlar. Bu beceri hem iş yaşamında hem de günlük hayatta büyük değer taşır.'\n\nKaynakça \n\nAyrıca bakınız \n Kalıplar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E18",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Doğal afetler, her yıl binlerce insanın hayatını etkilemektedir. Erken uyarı sistemleri ve hazırlık planları bu etkileri azaltmak açısından kritik öneme sahiptir.'",
+      "expected_behavior": "Doğal afetler ve önlem almanın önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Doğal afetler, her yıl binlerce insanın hayatını etkilemektedir. Erken uyarı sistemleri ve hazırlık planları bu etkileri azaltmak açısından kritik öneme sahiptir.'.\n\nNotlar\n\nKaynakça \n\nİnsan hakları",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E19",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'İnternet, insanlara bilgiye erişim, iletişim ve eğitim gibi pek çok imkân sunar. Ancak dezenformasyon ve gizlilik riskleri de beraberinde gelir.'",
+      "expected_behavior": "İnternetin avantajları ve riskleri hakkında kısa özet.",
+      "output": "Şu metni özetle: 'İnternet, insanlara bilgiye erişim, iletişim ve eğitim gibi pek çok imkân sunar. Ancak dezenformasyon ve gizlilik riskleri de beraberinde gelir.' \nGenel olarak, bu tür bir bilgi, bir kullanıcı tarafından bir kullanıcı tarafından kontrol edilen bir kullanıcı tarafından kontrol edilen bir kullanıcı tarafından tespit edilmiştir.\n\nKaynakça\n\nDış bağlantılar \nResmi web sitesi \nResmî web sitesi \nResmi web sitesi\n\nAyrıca bakınız \n Facebook\n Facebook\n Facebook\n Facebook\n Facebook\n\nAyrıca bakınız \n Facebook\n Facebook\n Facebook\n Facebook\n Twitter\n Facebook\n Twitter\n Facebook\n Facebook\n Facebook\n Facebook\n Twitter\n Facebook\n Facebook\n Twitter\n Facebook\n Facebook\n Twitter\n Facebook\n Facebook\n Facebook\n Facebook\n Facebook\n Facebook\n Facebook\n Twitter\n Facebook\n Facebook\n Facebook\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E20",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Çocukların erken yaşta dil öğrenmesi, beyin gelişimine büyük katkı sağlar. İki dillilik, bilişsel esnekliği artırdığı için son derece değerlidir.'",
+      "expected_behavior": "Erken dil öğreniminin faydaları hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Çocukların erken yaşta dil öğrenmesi, beyin gelişimine büyük katkı sağlar. İki dillilik, bilişsel esnekliği artırdığı için son derece değerlidir.'\n\n\"Peynan\" (Peynan), \"G\" (O) ve \"H\" (O) gibi birçok kişi tarafından kaleme alınan ve bu kelimelerle ilgili bilgilerden elde edilen bilgilerdir. Bu bilgiler, özellikle de bu kelimelerle ilgili bir fikirdir ve bu tür bilgilerden farklı olarak bu sözcüklere dayanmaktadır.\n\nOral (O) ve \"E\" (O)\n\n\"Peynan'ın bir diğer örneği, \"Peynan\"ın \"G\" (O) ve \"F\" gibi sözcükler, \"İ\" (O) ile ilgili bilgilerdir.\n\n\"Peyn",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E21",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Sanat, insanlığın ortak hafızasını yansıtır. Resim, heykel ve müzik gibi sanat dalları geçmişle gelecek arasında bir köprü işlevi görür.'",
+      "expected_behavior": "Sanatın tarihsel önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Sanat, insanlığın ortak hafızasını yansıtır. Resim, heykel ve müzik gibi sanat dalları geçmişle gelecek arasında bir köprü işlevi görür.'\n\nSanat eserleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E22",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Küresel ısınma, buzulların erimesine ve deniz seviyelerinin yükselmesine neden olmaktadır. Bu süreç, kıyı kentlerini ve ekosistemleri tehdit etmektedir.'",
+      "expected_behavior": "Küresel ısınmanın etkileri hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Küresel ısınma, buzulların erimesine ve deniz seviyelerinin yükselmesine neden olmaktadır. Bu süreç, kıyı kentlerini ve ekosistemleri tehdit etmektedir.'\n\nBu olgu, Avrupa ve Orta Çağ'da büyük ölçüde doğal gaz ve gazlar, su kaynakları ve denizlerdeki kar ve su kaynaklarını da içeren, modern ve modern bir iklim değişikliği olan küresel ısınmanın bir sonucu olarak, en yaygın olanı, küresel ısınma, ormansal su kaynakları ve okyanus akıntıları ile ilgili ve doğal gaz kaynakları ile ilgili bir dizi tür küresel ısınma ve doğal gaz kaynaklarının bir sonucu olarak meydana gelen doğal gaz kaynaklarıdır. Bu durum, okyanusun güney kesiminde, genellikle, okyanusun güney ve güney kesiminde, daha çok kuzey ve kuzey kesiminde, birkaç kilometre (9.6 km) çapında, okyanusun kıyı bölgesinde ve bazen de",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E23",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Beslenme alışkanlıkları, yaşam kalitesini doğrudan etkiler. Dengeli ve düzenli beslenme, hem fiziksel hem de zihinsel sağlığı destekler.'",
+      "expected_behavior": "Beslenme alışkanlıklarının yaşam kalitesine etkisi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Beslenme alışkanlıkları, yaşam kalitesini doğrudan etkiler. Dengeli ve düzenli beslenme, hem fiziksel hem de zihinsel sağlığı destekler.'\n\nDilentler \n\nKriptoloji, bir maddenin birden fazla kimyasal bileşiği olduğu, kimyasal olarak büyük ölçekli bir biyolojik yapının doğal veya kimyasal özelliklerini belirlemek için kullanılır. Örneğin, kimyasal olmayan bir kimyasal yapının, özellikle de kimyasal olarak önemli bir şekilde üretilen bir inorganik bileşik olarak, bu işlemden sonra, kimyasal olarak üretilen bir bileşik olarak kabul edilir.\n\nDilentler, en yaygın olarak biyolojik bir madde olan, bir madde olan bir kimyasal maddeler, iki veya daha fazla kimyasal bileşiğin bir parçasıdır.\n\nDilentler, kimyasal olmayan bir kimyasal bileşik olarak, herhangi bir kimyasal madde veya kimyasal madde ile etkileşime girerler.",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E24",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Bireysel sorumluluk, toplumsal dayanışmanın temelini oluşturur. Her bireyin aldığı küçük kararlar, büyük toplumsal sonuçlar doğurabilir.'",
+      "expected_behavior": "Bireysel sorumluluk ve toplumsal etki hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Bireysel sorumluluk, toplumsal dayanışmanın temelini oluşturur. Her bireyin aldığı küçük kararlar, büyük toplumsal sonuçlar doğurabilir.'\n\nAyrıca bakınız \n Sosyal sorumluluk\n Çalışma yönetimi\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n Sosyal sorumluluk\n\nKaynakça \n\nSosyal sorumluluk\nSosyal sorumluluk\nSosyal sorumluluk",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "E25",
+      "category": "E",
+      "prompt": "Şu metni özetle: 'Bir dili iyi öğrenmek için o dilde düşünmek ve üretmek gerekir. Sadece gramer kuralları ezberlemek yeterli değildir.'",
+      "expected_behavior": "Dil öğreniminde aktif kullanımın önemi hakkında kısa özet.",
+      "output": "Şu metni özetle: 'Bir dili iyi öğrenmek için o dilde düşünmek ve üretmek gerekir. Sadece gramer kuralları ezberlemek yeterli değildir.'\n\nAyrıca bakınız \n Dil felsefesi\n Dil felsefesi\n Dil felsefesi\n Dil felsefesi\n Dil felsefesi\n Dil felsefesi\n\nKaynakça \n\nDil felsefesi",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F01",
+      "category": "F",
+      "prompt": "Tekrar etme, sadece bir kez yaz: Türkiye çok güzel bir ülkedir.",
+      "expected_behavior": "Cümleyi yalnızca bir kez yazmak ya da yalnızca onaylamak.",
+      "output": "Tekrar etme, sadece bir kez yaz: Türkiye çok güzel bir ülkedir.\n\nTürkiye'de ise bu tür bir Türkiye'ye ait bir ülkeydi.\n\nTürkiye'de ise ilk önce Türkiye'den gelen Türk halklarına, daha sonra gelen Türk halklarına da rastlamak mümkündür.\n\nTürkiye'de ise ilk önce \"Söykü-Söykü-Söykü\" adıyla bilinen, Türk halklarının Anadolu'dan göç etmesiyle başlayan bir Türk halkını, 18. yüzyılın başlarında Türk halklarına karşı bir güç bıraktılar.\n\nTürkiye'de ise ilk Türk halklarına da rastlamak mümkündür.\n\nGeleneksel Türk halklarına göre, Türk halklarına göre ise, Türk halklarında da",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F02",
+      "category": "F",
+      "prompt": "Merhaba. Merhaba. Merhaba. Devam et.",
+      "expected_behavior": "Tekrar döngüsünden çıkıp anlamlı devam etmeli.",
+      "output": "Merhaba. Merhaba. Merhaba. Devam et. Bene Ne Denin?\"\n\nDış bağlantılar \n \n \n \n \n\nYaşayan insanlar\n1971 doğumlular\nTürk erkek şarkıcılar\nTürkiye'nin Eurovision Şarkı Yarışması yarışmacıları\n2002 Eurovision Şarkı Yarışması yarışmacıları",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F03",
+      "category": "F",
+      "prompt": "Türkiye, Türkiye, Türkiye hakkında bir şey söyle.",
+      "expected_behavior": "Konuya odaklanmalı, tekrarı sürdürmemeli.",
+      "output": "Türkiye, Türkiye, Türkiye hakkında bir şey söyle.\n\nTürkiye, dünyada çok sık kullanılan para birimleri vardır. Türkiye’nin her yerinde kullanılan para birimleri, ilk olarak Türkiye’nin ilk madeni para birimleri olarak kabul edilir.\n\nTürkiye’ye göre para birimleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F04",
+      "category": "F",
+      "prompt": "Bir hikaye anlat. Hikaye kısa olsun.",
+      "expected_behavior": "Kısa, tutarlı bir hikaye; tekrar veya anlamsız metin üretmemeli.",
+      "output": "Bir hikaye anlat. Hikaye kısa olsun.\n\nKaynakça \n\nFilm karakterleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F05",
+      "category": "F",
+      "prompt": "Şu konuyu değiştirme: Elma hakkında bir şey söyle. Sonra başka konuya geçme.",
+      "expected_behavior": "Elma hakkında kısa bir şey yazmak, gereksiz konuya geçmemek.",
+      "output": "Şu konuyu değiştirme: Elma hakkında bir şey söyle. Sonra başka konuya geçme.\n\nKaynakça \n\nTürk televizyon dizilerinin bölüm listeleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F06",
+      "category": "F",
+      "prompt": "Kısa ve net cevapla: Hava nasıl?",
+      "expected_behavior": "Kısa yanıt; uzun veya tekrarlı metin üretmemeli.",
+      "output": "Kısa ve net cevapla: Hava nasıl?\n\nAyrıca bakınız \nTürkiye'de bulunan gemiler\nTürkiye'deki gemilerde deniz",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F07",
+      "category": "F",
+      "prompt": "Bir cümle yaz ve dur.",
+      "expected_behavior": "Tek bir cümle, ardından durmalı.",
+      "output": "Bir cümle yaz ve dur.\n\nŞarkı listesi \n\nNot:\n\nKaynakça \n\n2011 single'ları\n2011 single'ları\n2011 single'ları\nBillboard Dance Club Songs'ta bir numara olan single'lar\nBillboard Dance Club Songs'ta bir numara olan single'lar\nBillboard Dance Club Songs'ta bir numara olan single'lar\nBillboard Dance Club Songs'ta bir numara olan single'lar\nBillboard Hot R&B/Hip-Hop Songs'ta bir numara olan single'lar\nBillboard Hot R&B/Hip-Hop Songs'ta bir numara olan single'lar\nVideo klip tartışmaları\nBillboard Dance Club Songs'ta",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F08",
+      "category": "F",
+      "prompt": "Sadece 'Anlıyorum.' de.",
+      "expected_behavior": "Anlıyorum veya buna çok yakın.",
+      "output": "Sadece 'Anlıyorum.' de.\n\nDış bağlantılar \n\nTürkiye'deki futbol kulüpleri\nTürkiye'deki futbol kulüpleri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F09",
+      "category": "F",
+      "prompt": "Şunu tekrar etme: Merhaba. Yalnızca bir kez yaz.",
+      "expected_behavior": "Merhaba — yalnızca bir kez.",
+      "output": "Şunu tekrar etme: Merhaba. Yalnızca bir kez yaz.\n\nDiğer \n\nŞuna veya eski adıyla Şuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna\nŞuna'ya\nŞuna\nŞuna'ya\nŞuna\nŞuna\nŞuna\nŞuna'ya\nŞuna'ya\nŞuna\nŞuna'ya\nŞuna'ya\nŞuna'ya\nŞuna",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F10",
+      "category": "F",
+      "prompt": "Bu cümleyi tamamla ama sadece bir kere: Türkçe öğrenmek ...",
+      "expected_behavior": "Cümle bir kez tamamlanmalı, tekrar edilmemeli.",
+      "output": "Bu cümleyi tamamla ama sadece bir kere: Türkçe öğrenmek ... ile ilgili cevaplar vardır.\n\nAyrıca bakınız \n Türküler\n Türküler\n\nKaynakça\n\nAyrıca bakınız\n\nTürküler\nTürküler\nTürküler\nTürküler\nTürküler\nTürküler",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F11",
+      "category": "F",
+      "prompt": "Anlat: Ne yedi Ahmet? Sonra başka konuya geçme.",
+      "expected_behavior": "Ahmetin yedikleri hakkında kısa yanıt; konu dışına çıkmamalı.",
+      "output": "Anlat: Ne yedi Ahmet? Sonra başka konuya geçme.\n\nAlat: Ne yedi Ahmet? Bu eserinde Allah'a Allah'a (Us. 9, 18, 22, 24, 29, 26, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 26, 28, 28, 28, 28, 28, 28",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F12",
+      "category": "F",
+      "prompt": "Bana tek kelime söyle.",
+      "expected_behavior": "Tek kelime.",
+      "output": "Bana tek kelime söyle. Bir cümlede, bir cümlede bir cümlede bir cümlede bir cümlede eklendiği gibi, bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede bir cümlede",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F13",
+      "category": "F",
+      "prompt": "Devam et: 'Bugün öğrendim ki ...'",
+      "expected_behavior": "Anlamlı, tek ve tutarlı bir tamamlama.",
+      "output": "Devam et: 'Bugün öğrendim ki ...' sözlere, \"Bu bana çok sevdi!\" diye yanıtladı.\n\nKaynakça \n\nTürk müzik müziği müzik grupları\nTürk söz yazarları\nYaşayan insanlar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F14",
+      "category": "F",
+      "prompt": "Şunu say: Bir, iki, üç. Dur.",
+      "expected_behavior": "Bir, iki, üç — daha fazla devam etmemeli.",
+      "output": "Şunu say: Bir, iki, üç. Dur.\n\nAyrıca bakınız\n\nKaynakça\n\nDış bağlantılar\nŞunu say: Bir, iki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, İki, iki, İki, İki, İki, Üç, İki, İki, İki, İki,",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F15",
+      "category": "F",
+      "prompt": "Sana bir soru soracağım, bekle.",
+      "expected_behavior": "Soruyu bekler tarzda kısa yanıt; uzun metin üretmemeli.",
+      "output": "Sana bir soru soracağım, bekle.\n\nŞarkı listesi\n\nKaynakça \n\nLavna şarkıları\nPop şarkıları\n2004 şarkıları\n2000'lerde İngilizce şarkılar",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F16",
+      "category": "F",
+      "prompt": "Türkçe Türkçe Türkçe. Bu kelimeyi tanımla.",
+      "expected_behavior": "Türkçe dilini tanımlamalı; tekrarı sürdürmemeli.",
+      "output": "Türkçe Türkçe Türkçe. Bu kelimeyi tanımla. Bu dil, Türkiye'ye özgü Türkçedir.\n\nTürkçe'nin Türkçe'nin Türkçesiyle aynı olduğu öne sürülmüştür.\n\nTürkçe'nin Türkçeliği \nTürkçe'nin Türkçesiyle aynı olduğu öne sürülmüştür.\n\nTürkçe'nin Türkçesiyle aynı olması sebebiyle, Türkçeye ait bir Türkçe sözcük olmasına rağmen Türk alfabesinde Türkçe olduğu öne sürülmektedir. Türkçe ile Türkçe'nin Türkçesinin Türkçesiyle aynı olduğu öne sürülmüştür.\n\nTürkçe'nin Türkçesiyle aynı olduğu öne sürülmüştür. Bu sözcüğün Türkçe'nin Türkçesiyle aynı olduğu öne sürülmüştür.\n\nTürkçe'nin Türkçesiyle aynı olduğu öne sürülmüştür.\n\nTürkçe'nin Türkçesinin Türkç",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F17",
+      "category": "F",
+      "prompt": "Özet yaz. Özet yaz. Özet yaz: Güneş enerji kaynağıdır.",
+      "expected_behavior": "Cümleyi özetlemeli; komutu tekrar etmemeli.",
+      "output": "Özet yaz. Özet yaz. Özet yaz: Güneş enerji kaynağıdır.\n\nBölümün konusu\n\nBölümün konusu \n\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\nBölümün konusu\n",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F18",
+      "category": "F",
+      "prompt": "Ankaranın başkent olduğunu bana birden fazla kez söyleme. Bir kez söyle.",
+      "expected_behavior": "Ankara Türkiye'nin başkentidir — yalnızca bir kez.",
+      "output": "Ankaranın başkent olduğunu bana birden fazla kez söyleme. Bir kez söyle. Çünkü o, onu bir kez daha iyi hatırlıyor.\n\nKaynakça\n\nKonuyla ilgili yayınlar\n\nDış bağlantılar \n\n http://www.milliyet.blog.com/article/fair/mapers/article/padders/content/mapers/fair/padders/blog/rd&d/ \n http://www.milliyet.blog.com/content/mapers/mapers/mapers/id/mapers/ \n http://www.milliyet.blog.com/r/cont",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F19",
+      "category": "F",
+      "prompt": "Bana iki cümle yaz ve dur.",
+      "expected_behavior": "İki cümle, ardından durmalı.",
+      "output": "Bana iki cümle yaz ve dur.\n\nŞarkı listesi \n \"Bana\" (söz: Gökhan Erelde) - 3:52\n \"Seni Sev\" (söz: Ayhan Erelde) - 3:37\n \"Beni Fıstık\" (söz: Gökhan Erelde) - 2:52\n \"Bana\" (söz & müzik: Gökhan Erelde) - 2:08\n \"Seni Sev\" (söz: Gökhan Erelde) - 3:33\n \"Beni Sev\" (söz: Gökhan Erelde) - 3:15\n \"Seni Sev\" (söz: Gökhan Erelde) - 3:25\n \"Beni Sev",
+      "eos_found": false,
+      "score": null,
+      "notes": ""
+    },
+    {
+      "id": "F20",
+      "category": "F",
+      "prompt": "Konu: Elma. Konu: Armut. Konu: Kivi. Hangi konu hakkında konuşmamı istersin?",
+      "expected_behavior": "Seçim yapmasını istemeli ya da bir konuyu seçip soruyu sor demeli; üç konuyu da aynı anda anlatmaya başlamamalı.",
+      "output": "Konu: Elma. Konu: Armut. Konu: Kivi. Hangi konu hakkında konuşmamı istersin?\n\nBölümler\n\n1. sezon (2002-2003)\n\n2. sezon (2003-2004)\n\nKaynakça\n\nDış bağlantılar \n FOX TV resmi internet sitesi \n\n2002'de başlayan Türk televizyon dizileri\n2002'de sona eren Türk televizyon dizileri\n2000'lerde Türkçe televizyon dizileri",
+      "eos_found": true,
+      "score": null,
+      "notes": ""
+    }
+  ]
+}
